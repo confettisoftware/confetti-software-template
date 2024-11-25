@@ -1,13 +1,17 @@
+import Layout from '../components/Layout';
+
 const Support = () => {
     return (
-        <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-            <h1>Support</h1>
-            <p>If you need help with Math Flash or have questions, please contact us:</p>
-            <ul>
-                <li>Email: <a href="mailto:confettisoftware@google.com">confettisoftware@google.com</a></li>
-            </ul>
-            <p>We’re here to help!</p>
-        </div>
+        <Layout>
+            <h1 className="text-4xl font-bold mb-4">Support</h1>
+            <p className="text-lg">
+                If you need help with any of our apps, please reach out to us at{' '}
+                <a href="mailto:confettisoftware@google.com" className="text-blue-500 hover:underline">
+                    confettisoftware@google.com
+                </a>.
+            </p>
+            <p className="mt-4">We aim to respond to all inquiries within 48 hours.</p>
+        </Layout>
     );
 };
 
