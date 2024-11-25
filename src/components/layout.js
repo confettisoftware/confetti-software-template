@@ -7,7 +7,9 @@ const Layout = ({ children }) => {
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-grow container mx-auto p-6">{children}</main>
+      <main className="flex-grow container mx-auto p-6">
+        {children}
+      </main>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white text-center py-4">
