@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import Link from 'next/link';
 
 const Home = () => {
     return (
@@ -9,9 +10,12 @@ const Home = () => {
                 <h2 className="text-2xl font-semibold mb-2">Our Apps</h2>
                 <ul className="list-disc ml-6">
                     <li>
-                        <a href="/mathflash" className="text-blue-500 hover:underline">
-                            Math Flash
-                        </a> - Learn math with interactive flashcards.
+                        <Link href="/mathflash">
+                            <a className="text-blue-500 hover:underline">
+                                Math Flash
+                            </a>
+                        </Link>
+                        - Learn math with interactive flashcards.
                     </li>
                 </ul>
             </section>
