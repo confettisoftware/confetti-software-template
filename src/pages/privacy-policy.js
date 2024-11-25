@@ -2,7 +2,7 @@ const PrivacyPolicy = () => {
     return (
         <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
             <h1>Privacy Policy</h1>
-            <p>Last Updated: [Insert Date]</p>
+            <p>Last Updated: [November 24, 2024]</p>
             <p>
                 At Confetti Software, we take your privacy seriously. The Math Flash app does not collect, store,
                 or share any personal data. All user data is stored locally on your device and is never transmitted
