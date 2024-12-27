@@ -1,3 +1,5 @@
+// src/pages/index.js
+
 import Layout from '../components/Layout';
 import Link from 'next/link';
 
@@ -13,7 +15,7 @@ const Home = () => {
                         <Link href="/mathflash" className="text-blue-500 hover:underline">
                             Math Flash
                         </Link>
-                        - Learn math with interactive flashcards.
+                        {' - '}Learn math with interactive flashcards.
                     </li>
                 </ul>
             </section>
@@ -24,7 +26,7 @@ const Home = () => {
                     <Link href="/privacy-policy" className="text-blue-500 hover:underline">
                         Privacy Policy
                     </Link>
-                    {" | "}
+                    {' | '}
                     <Link href="/support" className="text-blue-500 hover:underline">
                         Support
                     </Link>
