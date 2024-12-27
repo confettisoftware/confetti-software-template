@@ -19,8 +19,26 @@ const Home = () => {
                     </li>
                 </ul>
             </section>
+            
+            {/* Add Footer Links */}
+            <footer className="mt-8 border-t pt-4">
+                <p className="text-center">
+                    <Link href="/privacy-policy">
+                        <a className="text-blue-500 hover:underline">
+                            Privacy Policy
+                        </a>
+                    </Link>
+                    {" | "}
+                    <Link href="/support">
+                        <a className="text-blue-500 hover:underline">
+                            Support
+                        </a>
+                    </Link>
+                </p>
+            </footer>
         </Layout>
     );
 };
 
 export default Home;
+
