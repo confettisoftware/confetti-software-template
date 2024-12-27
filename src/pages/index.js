@@ -10,29 +10,23 @@ const Home = () => {
                 <h2 className="text-2xl font-semibold mb-2">Our Apps</h2>
                 <ul className="list-disc ml-6">
                     <li>
-                        <Link href="/mathflash">
-                            <a className="text-blue-500 hover:underline">
-                                Math Flash
-                            </a>
+                        <Link href="/mathflash" className="text-blue-500 hover:underline">
+                            Math Flash
                         </Link>
                         - Learn math with interactive flashcards.
                     </li>
                 </ul>
             </section>
-            
+
             {/* Add Footer Links */}
             <footer className="mt-8 border-t pt-4">
                 <p className="text-center">
-                    <Link href="/privacy-policy">
-                        <a className="text-blue-500 hover:underline">
-                            Privacy Policy
-                        </a>
+                    <Link href="/privacy-policy" className="text-blue-500 hover:underline">
+                        Privacy Policy
                     </Link>
                     {" | "}
-                    <Link href="/support">
-                        <a className="text-blue-500 hover:underline">
-                            Support
-                        </a>
+                    <Link href="/support" className="text-blue-500 hover:underline">
+                        Support
                     </Link>
                 </p>
             </footer>
@@ -41,4 +35,3 @@ const Home = () => {
 };
 
 export default Home;
-
