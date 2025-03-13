@@ -22,12 +22,15 @@ const Navbar = () => {
               <Link href="/mathflash" className="block px-4 py-2 hover:bg-gray-700">
                 Math Flash
               </Link>
-              {/* Add more app links here */}
+              <Link href="/sudokuplus" className="block px-4 py-2 hover:bg-gray-700">
+                SudokuPlus
+              </Link>
               <Link href="/future-app" className="block px-4 py-2 hover:bg-gray-700">
                 Future App
               </Link>
             </div>
           </div>
+
           {/* Other Links */}
           <Link href="/support" className="hover:underline">
             Support
