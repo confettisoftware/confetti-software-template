@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
             </p>
             <p className="mt-4">
                 If you have any questions about our Privacy Policy, please contact us at{' '}
-                <a href="mailto:confettisoftware@google.com" className="text-blue-500 hover:underline">
+                <a href="mailto:info@confettisoftware.com" className="text-blue-500 hover:underline">
                     confettisoftware@google.com
                 </a>.
             </p>
