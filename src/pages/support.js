@@ -6,7 +6,7 @@ const Support = () => {
             <h1 className="text-4xl font-bold mb-4">Support</h1>
             <p className="text-lg">
                 If you need help with any of our apps, please reach out to us at{' '}
-                <a href="mailto:confettisoftware@google.com" className="text-blue-500 hover:underline">
+                <a href="mailto:info@confettisoftware.com" className="text-blue-500 hover:underline">
                     confettisoftware@google.com
                 </a>.
             </p>
