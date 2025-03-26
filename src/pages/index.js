@@ -1,5 +1,3 @@
-// src/pages/index.js
-
 import Layout from '../components/Layout';
 import Link from 'next/link';
 
@@ -19,19 +17,6 @@ const Home = () => {
                     </li>
                 </ul>
             </section>
-
-            {/* Add Footer Links */}
-            <footer className="mt-8 border-t pt-4">
-                <p className="text-center">
-                    <Link href="/privacy-policy" className="text-blue-500 hover:underline">
-                        Privacy Policy
-                    </Link>
-                    {' | '}
-                    <Link href="/support" className="text-blue-500 hover:underline">
-                        Support
-                    </Link>
-                </p>
-            </footer>
         </Layout>
     );
 };
