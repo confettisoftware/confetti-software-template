@@ -25,8 +25,8 @@ const Navbar = () => {
               <Link href="/sudokuplus" className="block px-4 py-2 hover:bg-gray-700">
                 SudokuPlus
               </Link>
-              <Link href="/future-app" className="block px-4 py-2 hover:bg-gray-700">
-                Future App
+              <Link href="/tictactoe" className="block px-4 py-2 hover:bg-gray-700">
+                TicTacToe+
               </Link>
             </div>
           </div>
