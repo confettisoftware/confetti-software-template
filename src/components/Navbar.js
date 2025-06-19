@@ -28,14 +28,6 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-
-          {/* Other Links */}
-          <Link href="/support" className="hover:underline">
-            Support
-          </Link>
-          <Link href="/privacy-policy" className="hover:underline">
-            Privacy Policy
-          </Link>
         </div>
       </div>
     </nav>
