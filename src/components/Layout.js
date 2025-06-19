@@ -10,10 +10,12 @@ const Layout = ({ children }) => {
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-grow container mx-auto p-6">{children}</main>
+      <main className="flex-grow container mx-auto p-6">
+        {children}
+      </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center py-4 space-y-2">
+      <footer className="mt-auto flex-shrink-0 bg-gray-800 text-white text-center py-4 space-y-2">
         <div>
           <Link href="/about" className="text-blue-400 hover:underline mx-2">About</Link> |
           <Link href="/privacy-policy" className="text-blue-400 hover:underline mx-2">Privacy Policy</Link> |
