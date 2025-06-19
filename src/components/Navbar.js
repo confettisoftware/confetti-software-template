@@ -1,5 +1,3 @@
-// src/components/Navbar.js
-
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -18,7 +16,7 @@ const Navbar = () => {
             <button className="hover:underline focus:outline-none">
               Apps
             </button>
-            <div className="absolute left-0 mt-2 w-40 bg-gray-800 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <div className="absolute left-0 mt-2 w-48 bg-gray-800 text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50">
               <Link href="/mathflash" className="block px-4 py-2 hover:bg-gray-700">
                 Math Flash
               </Link>
