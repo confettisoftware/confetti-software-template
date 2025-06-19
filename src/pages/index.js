@@ -13,7 +13,13 @@ const Home = () => {
                         <Link href="/mathflash" className="text-blue-500 hover:underline">
                             Math Flash
                         </Link>
-                        {' - '}Learn math with interactive flashcards.
+                        {' – '}Learn math with interactive flashcards.
+                    </li>
+                    <li>
+                        <Link href="/tictactoe" className="text-blue-500 hover:underline">
+                            TicTacToe+
+                        </Link>
+                        {' – '}A sleek, smart take on the classic game with an ad-free option.
                     </li>
                 </ul>
             </section>
