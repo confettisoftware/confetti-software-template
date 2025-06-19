@@ -5,7 +5,8 @@ const Home = () => {
     return (
         <Layout>
             <h1 className="text-4xl font-bold mb-4">Welcome to Confetti Software 🚀</h1>
-            <p className="text-lg">Empowering creators to build the next big thing!</p>
+            <p className="text-lg mb-6">Tiny apps, big surprises.</p>
+
             <section className="mt-8">
                 <h2 className="text-2xl font-semibold mb-2">Our Apps</h2>
                 <ul className="list-disc ml-6 space-y-2">
