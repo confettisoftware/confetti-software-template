@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,500;1,400;1,500&family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,15 +7,19 @@
 @layer base {
     body {
         @apply flex flex-col min-h-screen antialiased;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     }
-    body > div,
+
+    body>div,
     .sb-page,
     .sb-base {
         @apply flex flex-col grow;
     }
+
     .sb-layout {
         @apply grow;
     }
+
     h1,
     h2,
     h3,
@@ -23,26 +27,281 @@
     h5,
     h6 {
         @apply break-words;
-        line-height: 1.15;
+        line-height: 1.2;
+        font-weight: 700;
+        font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Better focus states */
+    *:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
     }
 }
 
 @layer components {
+
+    /* Confetti Animation */
+    @keyframes confetti-fall {
+        0% {
+            transform: translateY(-50px) rotate(0deg) translateX(0px);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(100vh) rotate(720deg) translateX(var(--drift, 0px));
+            opacity: 0;
+        }
+    }
+
+    .animate-confetti-fall {
+        animation: confetti-fall linear forwards;
+        position: absolute;
+    }
+
+    /* Confetti Loader Animation */
+    @keyframes confetti-spin {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg) translateY(-36px);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg) translateY(-36px);
+        }
+    }
+
+    .animate-spin-slow {
+        animation: confetti-spin 3s ease-in-out infinite;
+    }
+
+    /* Confetti Software Brand Colors */
+    .confetti-orange {
+        color: #FF6B35;
+    }
+
+    .confetti-blue {
+        color: #4ECDC4;
+    }
+
+    .confetti-purple {
+        color: #9B59B6;
+    }
+
+    .confetti-green {
+        color: #2ECC71;
+    }
+
+    .confetti-yellow {
+        color: #F1C40F;
+    }
+
+    .confetti-pink {
+        color: #E91E63;
+    }
+
+    .confetti-cyan {
+        color: #3498DB;
+    }
+
+    /* Professional gradient backgrounds */
+    .gradient-confetti-orange {
+        background: linear-gradient(135deg, #FF6B35, #FF8E53);
+    }
+
+    .gradient-confetti-blue {
+        background: linear-gradient(135deg, #4ECDC4, #44A08D);
+    }
+
+    .gradient-confetti-purple {
+        background: linear-gradient(135deg, #9B59B6, #8E44AD);
+    }
+
+    .gradient-confetti-green {
+        background: linear-gradient(135deg, #2ECC71, #27AE60);
+    }
+
+    .gradient-confetti-yellow {
+        background: linear-gradient(135deg, #F1C40F, #F39C12);
+    }
+
+    .gradient-confetti-pink {
+        background: linear-gradient(135deg, #E91E63, #C0392B);
+    }
+
+    .gradient-confetti-cyan {
+        background: linear-gradient(135deg, #3498DB, #2980B9);
+    }
+
+    /* Enhanced button styles */
+    .btn-confetti {
+        @apply relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg;
+        background: linear-gradient(135deg, #FF6B35, #E91E63, #9B59B6);
+        background-size: 200% 200%;
+        animation: gradient-shift 3s ease infinite;
+    }
+
+    .btn-confetti:hover {
+        background-position: right center;
+    }
+
+    @keyframes gradient-shift {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* Card hover effects */
+    .card-confetti {
+        @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    }
+
+    .card-confetti:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Typography enhancements - Brand Font System */
+    .text-confetti-title {
+        @apply font-bold tracking-tight;
+        font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(135deg, #FF6B35, #E91E63, #9B59B6, #4ECDC4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Brand Typography Classes - Matching SwiftUI App */
+    .brand-title {
+        font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.03em !important;
+        line-height: 0.9 !important;
+        text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+        font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-weight: 200 !important;
+        letter-spacing: 0.15em !important;
+        line-height: 1.1 !important;
+        text-transform: uppercase;
+    }
+
+    .brand-body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-weight: 500 !important;
+        line-height: 1.6 !important;
+        letter-spacing: 0.01em;
+    }
+
+    .brand-button {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.02em !important;
+        text-transform: uppercase;
+    }
+
+    .brand-app-title {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.02em !important;
+        line-height: 1.1 !important;
+    }
+
+    .brand-app-description {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        letter-spacing: 0.01em;
+    }
+
+    /* Professional background patterns */
+    .bg-confetti-pattern {
+        background-image:
+            radial-gradient(circle at 25% 25%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(233, 30, 99, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(155, 89, 182, 0.1) 0%, transparent 50%);
+    }
+
+    /* Enhanced card styles */
+    .app-card {
+        @apply relative overflow-hidden;
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .app-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transition: left 0.5s;
+    }
+
+    .app-card:hover::before {
+        left: 100%;
+    }
+
+    /* Floating animation for confetti pieces */
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    /* Professional shadows */
+    .shadow-confetti {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .shadow-confetti-lg {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
     .sb-markdown {
         @apply text-lg leading-relaxed;
+
         a {
             @apply underline;
         }
+
         a:hover {
             @apply no-underline;
         }
+
         b,
         strong {
             @apply font-medium;
         }
+
         em {
             @apply italic;
         }
+
         h1,
         h2,
         h3,
@@ -51,23 +310,28 @@
         h6 {
             margin: 2.5rem 0 1.5rem;
         }
+
         p {
             margin: 1.5rem 0;
         }
+
         ol {
             @apply list-decimal;
             margin: 1.5rem 0;
             padding-left: 1.25em;
         }
+
         ul {
             @apply list-disc;
             margin: 1.5rem 0;
             padding-left: 1.25em;
         }
-        li > ul,
-        li > ol {
+
+        li>ul,
+        li>ol {
             margin: 0;
         }
+
         blockquote {
             @apply border-l-4 border-current;
             font-size: 1.25em;
@@ -75,41 +339,50 @@
             margin: 2.5rem 0;
             padding-left: 1.25em;
         }
+
         pre {
             @apply overflow-x-auto leading-normal border border-current;
             font-size: 0.875em;
             margin: 1.5rem 0;
             padding: 1.25em;
         }
+
         hr {
             @apply h-px bg-current border-0;
             margin: 2.5rem 0;
         }
+
         figure {
             margin: 1.5rem 0;
         }
+
         figcaption {
             @apply leading-normal;
             font-size: 0.875em;
             margin: 0.5rem 0 0;
         }
+
         table {
             @apply w-full text-left border border-collapse border-current;
             margin: 1.5rem 0;
         }
+
         caption {
             @apply text-left;
             font-size: 0.875em;
             margin: 0 0 0.5rem;
         }
+
         th,
         td {
             @apply border-b border-r border-current;
             padding: 0.5em;
         }
+
         th {
             font-weight: medium;
         }
+
         h1:first-child,
         h2:first-child,
         h3:first-child,
@@ -126,11 +399,12 @@
         table:first-child {
             margin-top: 0;
         }
-        h1 + h2,
-        h2 + h3,
-        h3 + h4,
-        h4 + h5,
-        h5 + h6 {
+
+        h1+h2,
+        h2+h3,
+        h3+h4,
+        h4+h5,
+        h5+h6 {
             margin-top: 1.5rem;
         }
     }
@@ -140,11 +414,13 @@
         @apply relative inline-flex items-center justify-center text-lg text-center no-underline transition duration-200 ease-in border-2 border-current;
         box-shadow: none;
     }
+
     .sb-component-button:not(.sb-component-button-no-hover):hover,
     .group:hover .sb-component-button:not(.sb-component-button-no-hover) {
         box-shadow: 0 6px 0 0 currentColor;
         transform: translate(0, -6px);
     }
+
     .sb-component-button-secondary {
         @apply rounded-full;
     }
@@ -153,10 +429,12 @@
     .sb-component-link {
         @apply relative inline-flex items-center justify-center text-lg no-underline;
     }
+
     .sb-component-link:not(.sb-component-link-fill) {
         box-shadow: 0 1px 0 0 currentColor;
         transition: box-shadow 0.25s ease-in-out;
     }
+
     .sb-component-link:not(.sb-component-link-fill):hover,
     .group:hover .sb-component-link:not(.sb-component-link-fill) {
         box-shadow: 0 5px 0 0 currentColor;
@@ -166,6 +444,7 @@
     .sb-component-social {
         @apply relative inline-flex items-center justify-center text-lg no-underline;
     }
+
     .sb-component-social:not(.sb-component-social-fill) {
         @apply opacity-100 hover:opacity-80;
         transition: opacity 0.25s ease-in-out;
@@ -180,6 +459,7 @@
         transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
         z-index: 1;
     }
+
     .sb-component-link-fill:before,
     .sb-component-social-fill:before,
     .sb-header-logo:before {
@@ -191,6 +471,7 @@
         transition: transform 0.25s, opacity 0.25s;
         width: 101%;
     }
+
     .sb-component-link-fill:hover:before,
     .sb-component-social-fill:hover:before,
     .sb-header-logo:hover:before {
@@ -204,39 +485,48 @@
     data:has(.sb-form-control-full) {
         @apply sm:col-span-2;
     }
+
     .sb-form-control {
         @apply mb-6;
     }
+
     .sb-label {
         @apply inline-block mb-1 sm:text-xl;
     }
+
     .sb-input,
     .sb-select,
     .sb-textarea {
         @apply w-full p-3 bg-transparent border border-current focus:outline-none sm:text-xl;
     }
+
     option {
         color: initial;
     }
+
     .sb-checkbox {
         @apply absolute opacity-0 appearance-none select-none;
         height: 1.5em;
         width: 1.5em;
     }
-    .sb-checkbox + .sb-label {
+
+    .sb-checkbox+.sb-label {
         @apply relative cursor-pointer sm:text-xl;
         padding-left: 2.5em;
     }
-    .sb-checkbox + .sb-label:before {
+
+    .sb-checkbox+.sb-label:before {
         @apply absolute left-0 font-sans text-center -translate-y-1/2 border border-current cursor-pointer top-1/2;
         content: '';
         height: 1.5em;
         width: 1.5em;
         line-height: 1.25;
     }
-    .sb-checkbox:checked + .sb-label:before {
+
+    .sb-checkbox:checked+.sb-label:before {
         content: '\2713';
     }
+
     .sb-select {
         @apply bg-no-repeat appearance-none cursor-pointer pr-7;
         background-image: linear-gradient(45deg, transparent 50%, currentColor 0), linear-gradient(135deg, currentColor 50%, transparent 0);
@@ -245,7 +535,7 @@
         background-repeat: no-repeat;
     }
 
-    .text-center + .sb-contact-section-form,
+    .text-center+.sb-contact-section-form,
     .sb-contact-section-form:only-child {
         text-align: center;
     }
@@ -264,109 +554,134 @@
     /* Color palettes */
     .colors-a {
         @apply bg-dark text-on-dark;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-dark placeholder-on-dark;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-dark;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-dark;
         }
+
         .sb-header-overlay {
             @apply bg-dark;
         }
     }
+
     .colors-b {
         @apply bg-light text-on-light;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-light placeholder-on-light;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-light;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-light;
         }
+
         .sb-header-overlay {
             @apply bg-light;
         }
     }
+
     .colors-c {
         @apply bg-primary text-on-primary;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-primary placeholder-on-primary;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-primary;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-primary;
         }
+
         .sb-header-overlay {
             @apply bg-primary;
         }
     }
+
     .colors-d {
         @apply bg-secondary text-on-secondary;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-secondary placeholder-on-secondary;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-secondary;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-secondary;
         }
+
         .sb-header-overlay {
             @apply bg-secondary;
         }
     }
+
     .colors-e {
         @apply bg-complementary text-on-complementary;
+
         .sb-input,
         .sb-select,
         .sb-textarea {
             @apply placeholder-opacity-75 text-on-complementary placeholder-on-complementary;
         }
+
         .sb-component-link-fill:before,
         .sb-component-social-fill:before,
         .sb-header-logo:before {
             @apply bg-on-complementary;
         }
+
         .sb-component-link-fill:hover,
         .sb-component-social-fill:hover,
         .sb-header-logo:hover {
             @apply text-complementary;
         }
+
         .sb-header-overlay {
             @apply bg-complementary;
         }
     }
+
     .colors-f {
         @apply bg-transparent;
     }

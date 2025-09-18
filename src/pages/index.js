@@ -1,35 +1,225 @@
 import Layout from '../components/Layout';
+import ConfettiAnimation from '../components/ConfettiAnimation';
+import StructuredData from '../components/StructuredData';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Home = () => {
     return (
-        <Layout>
-            <h1 className="text-4xl font-bold mb-4">Welcome to Confetti Software 🚀</h1>
-            <p className="text-lg mb-6">Tiny apps, big surprises.</p>
+        <Layout
+            title="Confetti Software - Educational Mobile Apps That Make Learning Fun"
+            description="Confetti Software creates educational mobile apps that make learning fun. Discover Math Flash, SudokuPlus, and TicTacToe+ - apps that turn education into celebration."
+        >
+            <StructuredData
+                data={{
+                    '@context': 'https://schema.org',
+                    '@type': 'SoftwareApplication',
+                    name: 'Confetti Software',
+                    description: 'Educational mobile apps that make learning fun',
+                    url: 'https://confettisoftware.com',
+                    applicationCategory: 'EducationalApplication',
+                    operatingSystem: 'iOS',
+                    offers: {
+                        '@type': 'Offer',
+                        price: '0',
+                        priceCurrency: 'USD'
+                    },
+                    publisher: {
+                        '@type': 'Organization',
+                        name: 'Confetti Software',
+                        url: 'https://confettisoftware.com'
+                    }
+                }}
+            />
+            <ConfettiAnimation />
 
-            <section className="mt-8">
-                <h2 className="text-2xl font-semibold mb-2">Our Apps</h2>
-                <ul className="list-disc ml-6 space-y-2">
-                    <li>
-                        <Link href="/mathflash" className="text-blue-500 hover:underline">
-                            Math Flash
-                        </Link>
-                        {' – '}Learn math with interactive flashcards.
-                    </li>
-                    <li>
-                        <Link href="/sudokuplus" className="text-blue-500 hover:underline">
-                            SudokuPlus
-                        </Link>
-                        {' – '}Challenge your brain with clean, minimal Sudoku.
-                    </li>
-                    <li>
-                        <Link href="/tictactoe" className="text-blue-500 hover:underline">
-                            TicTacToe+
-                        </Link>
-                        {' – '}A sleek, smart take on the classic game with an ad-free option.
-                    </li>
-                </ul>
+            {/* Apps Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-2xl font-light text-black mb-8 tracking-wider">Collection</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        {/* Math Flash */}
+                        <div className="group">
+                            <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                                <Link href="/mathflash" className="block">
+                                    <div className="aspect-square bg-gradient-to-br from-blue-50/50 to-blue-100/50 backdrop-blur-sm flex items-center justify-center p-6 sm:p-8">
+                                        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                            <Image
+                                                src="/images/mathflash-icon.png"
+                                                alt="Math Flash App Icon"
+                                                width={96}
+                                                height={96}
+                                                className="w-full h-full object-cover"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
+                                </Link>
+                                <div className="p-6 backdrop-blur-sm bg-white/10">
+                                    <h3 className="text-lg font-medium text-black mb-3">Math Flash</h3>
+                                    <p className="text-sm text-gray-700 mb-4">Quick math practice that sparks joy</p>
+                                    <a
+                                        href="https://apps.apple.com/us/app/math-flash-fast-arithmetic/id6739975541"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block"
+                                    >
+                                        <Image
+                                            src="/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                                            alt="Download on the App Store"
+                                            width={120}
+                                            height={40}
+                                            className="h-8 w-auto hover:opacity-80 transition-opacity"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* SudokuPlus */}
+                        <div className="group">
+                            <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                                <Link href="/sudokuplus" className="block">
+                                    <div className="aspect-square bg-gradient-to-br from-green-50/50 to-green-100/50 backdrop-blur-sm flex items-center justify-center p-6 sm:p-8">
+                                        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                            <Image
+                                                src="/images/sudokuplus-icon.png"
+                                                alt="SudokuPlus App Icon"
+                                                width={96}
+                                                height={96}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                                </Link>
+                                <div className="p-6 backdrop-blur-sm bg-white/10">
+                                    <h3 className="text-lg font-medium text-black mb-3">SudokuPlus</h3>
+                                    <p className="text-sm text-gray-700 mb-4">Classic puzzle game with modern design</p>
+                                    <a
+                                        href="https://apps.apple.com/us/app/sudokuplus-pure-logic/id6743255151"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block"
+                                    >
+                                        <Image
+                                            src="/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                                            alt="Download on the App Store"
+                                            width={120}
+                                            height={40}
+                                            className="h-8 w-auto hover:opacity-80 transition-opacity"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* TicTacToe+ */}
+                        <div className="group">
+                            <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                                <Link href="/tictactoe" className="block">
+                                    <div className="aspect-square bg-gradient-to-br from-purple-50/50 to-purple-100/50 backdrop-blur-sm flex items-center justify-center p-6 sm:p-8">
+                                        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                            <Image
+                                                src="/images/tictactoe-icon.png"
+                                                alt="TicTacToe+ App Icon"
+                                                width={96}
+                                                height={96}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                                </Link>
+                                <div className="p-6 backdrop-blur-sm bg-white/10">
+                                    <h3 className="text-lg font-medium text-black mb-3">TicTacToe+</h3>
+                                    <p className="text-sm text-gray-700 mb-4">Classic strategy game with smart AI</p>
+                                    <a
+                                        href="https://apps.apple.com/us/app/tictactoe-flux/id6746926512"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block"
+                                    >
+                                        <Image
+                                            src="/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                                            alt="Download on the App Store"
+                                            width={120}
+                                            height={40}
+                                            className="h-8 w-auto hover:opacity-80 transition-opacity"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
+            {/* Hero Section */}
+            <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
+                <div className="text-center max-w-4xl mx-auto">
+                    <p className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">Apps that make every moment a celebration</p>
+                    <div className="text-sm text-gray-500 tracking-widest uppercase">Where celebration meets innovation</div>
+                </div>
+            </div>
+
+            {/* Footer */}
+            <footer className="relative backdrop-blur-2xl bg-gradient-to-b from-white/20 to-white/5 border-t border-white/30 py-16 overflow-hidden">
+                {/* Subtle confetti background */}
+                <div className="absolute inset-0 opacity-5">
+                    <div className="absolute top-4 left-1/4 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                    <div className="absolute top-8 right-1/3 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse delay-100"></div>
+                    <div className="absolute top-12 left-1/2 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-200"></div>
+                    <div className="absolute top-6 right-1/4 w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse delay-300"></div>
+                    <div className="absolute top-10 left-1/3 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-500"></div>
+                </div>
+
+                <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                    <h3
+                        className="text-3xl font-bold text-black mb-0 tracking-tight uppercase"
+                        style={{
+                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
+                            fontSize: '28px'
+                        }}
+                    >
+                        CONFETTI
+                    </h3>
+                    <p
+                        className="text-base font-light text-gray-500 tracking-wider mb-6 -mt-1"
+                        style={{
+                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
+                            fontSize: '16px'
+                        }}
+                    >
+                        SOFTWARE
+                    </p>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-8">Where celebration meets innovation</p>
+
+                    <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                        <p className="text-sm text-gray-600">hello@confettisoftware.com</p>
+                        <div className="flex items-center space-x-4">
+                            <a
+                                href="https://apps.apple.com/us/app/math-flash-fast-arithmetic/id6739975541"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="opacity-60 hover:opacity-100 transition-opacity"
+                            >
+                                <img
+                                    src="/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                                    alt="Download on the App Store"
+                                    className="h-6 w-auto"
+                                />
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Bottom Bar */}
+                    <div className="mt-12 pt-8 border-t border-white/30 text-center">
+                        <p className="text-xs text-gray-500 tracking-wider">© 2025 Confetti Software. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
         </Layout>
     );
 };

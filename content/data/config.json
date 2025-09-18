@@ -5,23 +5,28 @@
         "type": "Header",
         "headerVariant": "variant-c",
         "isSticky": false,
-        "title": "Personal",
+        "title": "Confetti Software",
         "isTitleVisible": true,
         "primaryLinks": [
             {
                 "type": "Link",
-                "label": "Info",
-                "url": "/info"
+                "label": "Apps",
+                "url": "/"
             },
             {
                 "type": "Link",
-                "label": "Projects",
-                "url": "/projects"
+                "label": "Math Flash",
+                "url": "/mathflash"
             },
             {
                 "type": "Link",
-                "label": "Blog",
-                "url": "/blog"
+                "label": "SudokuPlus",
+                "url": "/sudokuplus"
+            },
+            {
+                "type": "Link",
+                "label": "TicTacToe+",
+                "url": "/tictactoe"
             }
         ],
         "socialLinks": [
@@ -51,44 +56,49 @@
         "primaryLinks": [
             {
                 "type": "Link",
-                "label": "Info",
-                "url": "/info",
-                "altText": ""
+                "label": "Apps",
+                "url": "/",
+                "altText": "View all apps"
             },
             {
                 "type": "Link",
-                "label": "Contact",
-                "url": "mailto:thisismyemail.@myemail.me",
-                "altText": ""
+                "label": "Math Flash",
+                "url": "/mathflash",
+                "altText": "Math Flash app"
             },
             {
                 "type": "Link",
-                "label": "Blog",
-                "url": "/blog",
-                "altText": ""
+                "label": "SudokuPlus",
+                "url": "/sudokuplus",
+                "altText": "SudokuPlus app"
             },
             {
                 "type": "Link",
-                "label": "GitHub",
-                "url": "https://github.com/netlify-templates",
-                "altText": "Netlify templates"
+                "label": "TicTacToe+",
+                "url": "/tictactoe",
+                "altText": "TicTacToe+ app"
             }
         ],
         "contacts": {
             "type": "ContactBlock",
-            "title": "Contact details",
-            "phoneNumber": "850-123-5021",
-            "phoneAltText": "My phone number",
-            "email": "thisismyemail.@myemail.me",
-            "emailAltText": "My email",
-            "address": "312 Lovely Street, Brooklyn, NY, 123456",
-            "addressAltText": "My address"
+            "title": "Get in Touch",
+            "phoneNumber": "",
+            "phoneAltText": "",
+            "email": "hello@confettisoftware.com",
+            "emailAltText": "Contact Confetti Software",
+            "address": "",
+            "addressAltText": ""
         },
-        "copyrightText": "Powered by [Netlify](https://www.netlify.com/)",
+        "copyrightText": "© 2024 Confetti Software. Crafting delightful mobile experiences.",
         "styles": {
             "self": {
                 "width": "narrow",
-                "padding": ["pt-16", "pb-16", "pr-4", "pl-4"]
+                "padding": [
+                    "pt-16",
+                    "pb-16",
+                    "pr-4",
+                    "pl-4"
+                ]
             }
         }
     }
