@@ -15,13 +15,6 @@ const Navbar = () => {
                     </svg>
                 </button>
 
-                {/* Mobile Search Button */}
-                <button className="sm:hidden text-gray-600 hover:text-black transition-colors ml-auto">
-                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </button>
-
                 {/* Desktop Left Navigation */}
                 <div className="hidden sm:flex items-center space-x-8 flex-1">
                     <Link href="/about" className="text-gray-600 hover:text-black transition-colors font-medium">
@@ -103,6 +96,13 @@ const Navbar = () => {
                         Support
                     </Link>
                 </div>
+
+                {/* Mobile Search Button */}
+                <button className="sm:hidden text-gray-600 hover:text-black transition-colors">
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
             </div>
 
             {/* Mobile Menu */}

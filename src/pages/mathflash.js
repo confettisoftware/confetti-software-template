@@ -93,7 +93,7 @@ const MathFlash = () => {
                             href="/"
                             className="inline-block px-8 py-3 backdrop-blur-sm bg-white/20 border border-white/30 text-gray-700 hover:bg-white/30 hover:text-black transition-all duration-200 rounded-xl"
                         >
-                            Back to Collection
+                            Back to Our Apps
                         </Link>
                     </div>
                 </div>
