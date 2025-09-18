@@ -225,7 +225,7 @@ const Navbar = () => {
                                 </div>
                             ) : (
                                 <div className="p-6 text-center text-gray-500">
-                                    <p>No results found for "{searchQuery}"</p>
+                                    <p>No results found for &quot;{searchQuery}&quot;</p>
                                 </div>
                             )}
                         </div>
