@@ -10,11 +10,11 @@ const TicTacToePlus = () => {
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
-                    <div className="w-32 h-32 mx-auto mb-8 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                    <div className="w-32 h-32 mx-auto mb-12 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                         <img src="/images/tictactoe-icon.png" alt="TicTacToe+ App Icon" className="w-full h-full object-cover" />
                     </div>
                     <h1
-                        className="text-5xl sm:text-6xl font-bold text-black mb-4"
+                        className="text-5xl sm:text-6xl font-bold text-black mb-6"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
                         }}
