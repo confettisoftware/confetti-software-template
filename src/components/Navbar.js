@@ -9,15 +9,25 @@ const Navbar = () => {
 
     // Search data
     const searchData = [
-        { title: 'Math Flash', description: 'Quick math practice that sparks joy', url: '/mathflash' },
-        { title: 'SudokuPlus', description: 'Classic puzzle game with modern design', url: '/sudokuplus' },
-        { title: 'TicTacToe+', description: 'Classic strategy game with smart AI', url: '/tictactoe' },
-        { title: 'About', description: 'Learn about Confetti Software', url: '/about' },
-        { title: 'Support', description: 'Get help and support', url: '/support' }
+        {
+            title: 'Math Flash',
+            description: 'Quick math practice that sparks joy',
+            url: '/mathflash',
+            keywords: 'math, arithmetic, practice, education, learning'
+        },
+        { title: 'SudokuPlus', description: 'Classic puzzle game with modern design', url: '/sudokuplus', keywords: 'sudoku, puzzle, game, logic, brain' },
+        { title: 'TicTacToe+', description: 'Classic strategy game with smart AI', url: '/tictactoe', keywords: 'tictactoe, tic tac toe, strategy, game, AI' },
+        { title: 'About', description: 'Learn about Confetti Software', url: '/about', keywords: 'about, company, team, mission, story' },
+        { title: 'Support', description: 'Get help and support', url: '/support', keywords: 'support, help, contact, email, assistance, FAQ' },
+        { title: 'Contact', description: 'Get in touch with us', url: '/support', keywords: 'contact, email, reach out, get in touch, hello' },
+        { title: 'Email', description: 'Send us an email', url: '/support', keywords: 'email, mail, contact, message, hello@confettisoftware.com' }
     ];
 
     const filteredResults = searchData.filter(
-        (item) => item.title.toLowerCase().includes(searchQuery.toLowerCase()) || item.description.toLowerCase().includes(searchQuery.toLowerCase())
+        (item) =>
+            item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (item.keywords && item.keywords.toLowerCase().includes(searchQuery.toLowerCase()))
     );
 
     return (
