@@ -13,10 +13,28 @@ const Navbar = () => {
             title: 'Math Flash',
             description: 'Quick math practice that sparks joy',
             url: '/mathflash',
-            keywords: 'math, arithmetic, practice, education, learning'
+            keywords:
+                'math, arithmetic, practice, education, learning, educational, school, kids, children, numbers, calculation, multiplication, division, addition, subtraction'
         },
-        { title: 'SudokuPlus', description: 'Classic puzzle game with modern design', url: '/sudokuplus', keywords: 'sudoku, puzzle, game, logic, brain' },
-        { title: 'TicTacToe+', description: 'Classic strategy game with smart AI', url: '/tictactoe', keywords: 'tictactoe, tic tac toe, strategy, game, AI' },
+        {
+            title: 'SudokuPlus',
+            description: 'Classic puzzle game with modern design',
+            url: '/sudokuplus',
+            keywords: 'sudoku, puzzle, game, games, logic, brain, mental, challenge, grid, numbers, zen, relaxing, meditation'
+        },
+        {
+            title: 'TicTacToe+',
+            description: 'Classic strategy game with smart AI',
+            url: '/tictactoe',
+            keywords: 'tictactoe, tic tac toe, strategy, game, games, AI, artificial intelligence, X, O, board, classic, fun'
+        },
+        { title: 'Games', description: 'All our mobile games', url: '/', keywords: 'games, gaming, mobile games, apps, entertainment, fun, play, interactive' },
+        {
+            title: 'Learning',
+            description: 'Educational apps and games',
+            url: '/',
+            keywords: 'learning, education, educational, school, study, knowledge, skills, development, training'
+        },
         { title: 'About', description: 'Learn about Confetti Software', url: '/about', keywords: 'about, company, team, mission, story' },
         { title: 'Support', description: 'Get help and support', url: '/support', keywords: 'support, help, contact, email, assistance, FAQ' },
         { title: 'Contact', description: 'Get in touch with us', url: '/support', keywords: 'contact, email, reach out, get in touch, hello' },
