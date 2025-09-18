@@ -18,7 +18,7 @@ const Support = () => {
                     >
                         Support
                     </h1>
-                    <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">We're here to help you celebrate every moment</p>
+                    <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">We&apos;re here to help you celebrate every moment</p>
                 </div>
             </div>
 
@@ -44,7 +44,7 @@ const Support = () => {
                                 <a href="mailto:hello@confettisoftware.com" className="text-black hover:underline font-medium">
                                     hello@confettisoftware.com
                                 </a>{' '}
-                                and we'll respond within 24 hours.
+                                and we&apos;ll respond within 24 hours.
                             </p>
                         </div>
 
@@ -57,7 +57,7 @@ const Support = () => {
 
                         <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                             <h3 className="text-lg font-medium text-black mb-3">Do you collect personal data?</h3>
-                            <p className="text-sm text-gray-600">No, we don't collect any personal data. All our apps are designed with privacy in mind.</p>
+                            <p className="text-sm text-gray-600">No, we don&apos;t collect any personal data. All our apps are designed with privacy in mind.</p>
                         </div>
 
                         <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
@@ -88,7 +88,7 @@ const Support = () => {
                     >
                         Still Need Help?
                     </h2>
-                    <p className="text-gray-600 mb-8">We'd love to hear from you. Send us an email and we'll get back to you as soon as possible.</p>
+                    <p className="text-gray-600 mb-8">We&apos;d love to hear from you. Send us an email and we&apos;ll get back to you as soon as possible.</p>
 
                     <div className="space-y-4">
                         <a
