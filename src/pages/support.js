@@ -11,9 +11,10 @@ const Support = () => {
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
                     <h1
-                        className="text-3xl sm:text-4xl font-bold text-black mb-4 uppercase"
+                        className="text-3xl sm:text-4xl font-bold text-black mb-4"
                         style={{
-                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
+                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
+                            textTransform: 'none'
                         }}
                     >
                         Support
@@ -50,9 +51,7 @@ const Support = () => {
 
                         <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                             <h3 className="text-lg font-medium text-black mb-3">Are your apps free?</h3>
-                            <p className="text-sm text-gray-600">
-                                Math Flash is $0.99, while SudokuPlus and TicTacToe+ are free with optional in-app purchases to remove ads.
-                            </p>
+                            <p className="text-sm text-gray-600">All our apps are free with optional in-app purchases to remove ads.</p>
                         </div>
 
                         <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">

@@ -7,8 +7,8 @@ import Image from 'next/image';
 const Home = () => {
     return (
         <Layout
-            title="Confetti Software - Educational Mobile Apps That Make Learning Fun"
-            description="Confetti Software creates educational mobile apps that make learning fun. Discover Math Flash, SudokuPlus, and TicTacToe+ - apps that turn education into celebration."
+            title="Confetti Software - Apps That Make Every Moment a Celebration"
+            description="Confetti Software creates educational mobile apps that make learning fun. Discover Math Flash, SudokuPlus, and TicTacToe+."
         >
             <StructuredData
                 data={{
@@ -42,7 +42,7 @@ const Home = () => {
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/mathflash" className="block">
                                     <div className="aspect-square bg-gradient-to-br from-blue-50/50 to-blue-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
-                                        <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/mathflash-icon.png"
                                                 alt="Math Flash App Icon"
@@ -60,7 +60,7 @@ const Home = () => {
                                     <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                                         Math Flash
                                     </h3>
-                                    <p className="text-sm text-gray-700 mb-4">Quick math practice that sparks joy</p>
+                                    <p className="text-sm text-gray-700 mb-4">Quick math practice</p>
                                     <a
                                         href="https://apps.apple.com/us/app/math-flash-fast-arithmetic/id6739975541"
                                         target="_blank"
@@ -84,7 +84,7 @@ const Home = () => {
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/sudokuplus" className="block">
                                     <div className="aspect-square bg-gradient-to-br from-green-50/50 to-green-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
-                                        <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/sudokuplus-icon.png"
                                                 alt="SudokuPlus App Icon"
@@ -101,7 +101,7 @@ const Home = () => {
                                     <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                                         SudokuPlus
                                     </h3>
-                                    <p className="text-sm text-gray-700 mb-4">Classic puzzle game with modern design</p>
+                                    <p className="text-sm text-gray-700 mb-4">Classic puzzle game</p>
                                     <a
                                         href="https://apps.apple.com/us/app/sudokuplus-pure-logic/id6743255151"
                                         target="_blank"
@@ -125,7 +125,7 @@ const Home = () => {
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/tictactoe" className="block">
                                     <div className="aspect-square bg-gradient-to-br from-purple-50/50 to-purple-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
-                                        <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/tictactoe-icon.png"
                                                 alt="TicTacToe+ App Icon"
@@ -142,7 +142,7 @@ const Home = () => {
                                     <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                                         TicTacToe+
                                     </h3>
-                                    <p className="text-sm text-gray-700 mb-4">Classic strategy game with smart AI</p>
+                                    <p className="text-sm text-gray-700 mb-4">Classic strategy game</p>
                                     <a
                                         href="https://apps.apple.com/us/app/tictactoe-flux/id6746926512"
                                         target="_blank"
@@ -168,7 +168,6 @@ const Home = () => {
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
                     <p className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">Apps that make every moment a celebration</p>
-                    <div className="text-sm text-gray-500 tracking-widest">Where celebration meets innovation</div>
                 </div>
             </div>
 
@@ -188,7 +187,7 @@ const Home = () => {
                         className="font-bold text-black mb-0"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
-                            fontSize: '32px',
+                            fontSize: '24px',
                             textTransform: 'none',
                             letterSpacing: '0.01em'
                         }}
@@ -199,13 +198,12 @@ const Home = () => {
                         className="font-light text-gray-500 mb-6 -mt-1"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
-                            fontSize: '18px',
+                            fontSize: '14px',
                             letterSpacing: '0.06em'
                         }}
                     >
                         SOFTWARE
                     </p>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-8">Where celebration meets innovation</p>
 
                     <div className="flex flex-col items-center justify-center space-y-4">
                         <p className="text-sm text-gray-600">hello@confettisoftware.com</p>

@@ -11,7 +11,7 @@ const SudokuPlus = () => {
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
-                    <div className="w-32 h-32 mx-auto mb-12 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                    <div className="w-28 h-28 mx-auto mb-12 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                         <Image
                             src="/images/sudokuplus-icon.png"
                             alt="SudokuPlus App Icon"

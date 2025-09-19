@@ -10,20 +10,20 @@ const Navbar = () => {
     const searchData = [
         {
             title: 'Math Flash',
-            description: 'Quick math practice that sparks joy',
+            description: 'Quick math practice',
             url: '/mathflash',
             keywords:
                 'math, arithmetic, practice, education, learning, educational, school, kids, children, numbers, calculation, multiplication, division, addition, subtraction'
         },
         {
             title: 'SudokuPlus',
-            description: 'Classic puzzle game with modern design',
+            description: 'Classic puzzle game',
             url: '/sudokuplus',
             keywords: 'sudoku, puzzle, game, games, logic, brain, mental, challenge, grid, numbers, zen, relaxing, meditation'
         },
         {
             title: 'TicTacToe+',
-            description: 'Classic strategy game with smart AI',
+            description: 'Classic strategy game',
             url: '/tictactoe',
             keywords: 'tictactoe, tic tac toe, strategy, game, games, AI, artificial intelligence, X, O, board, classic, fun'
         },
@@ -207,6 +207,12 @@ const Navbar = () => {
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="search-title"
+                    onClick={(e) => {
+                        if (e.target === e.currentTarget) {
+                            setIsSearchOpen(false);
+                            setSearchQuery('');
+                        }
+                    }}
                 >
                     <div className="w-full max-w-2xl backdrop-blur-xl bg-white/90 rounded-2xl shadow-2xl border border-white/30">
                         {/* Search Header */}
@@ -229,6 +235,12 @@ const Navbar = () => {
                                     placeholder="Search apps and pages..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Escape') {
+                                            setIsSearchOpen(false);
+                                            setSearchQuery('');
+                                        }
+                                    }}
                                     className="w-full pl-10 pr-4 py-3 bg-white/50 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                     autoFocus
                                     aria-label="Search input"

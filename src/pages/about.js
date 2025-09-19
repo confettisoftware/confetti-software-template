@@ -68,12 +68,12 @@ const About = () => (
                         <div className="w-20 h-20 mx-auto mb-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                             <img src="/images/mathflash-icon.png" alt="Math Flash App Icon" className="w-full h-full object-cover" />
                         </div>
-                        <h3 className="text-xl font-medium text-black mb-3">
+                        <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                             <Link href="/mathflash" className="hover:text-gray-600 transition-colors">
                                 Math Flash
                             </Link>
                         </h3>
-                        <p className="text-gray-600 text-sm">Quick math practice that sparks joy</p>
+                        <p className="text-gray-600 text-sm">Quick math practice</p>
                     </div>
 
                     {/* SudokuPlus */}
@@ -81,12 +81,12 @@ const About = () => (
                         <div className="w-20 h-20 mx-auto mb-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                             <img src="/images/sudokuplus-icon.png" alt="SudokuPlus App Icon" className="w-full h-full object-cover" />
                         </div>
-                        <h3 className="text-xl font-medium text-black mb-3">
+                        <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                             <Link href="/sudokuplus" className="hover:text-gray-600 transition-colors">
                                 SudokuPlus
                             </Link>
                         </h3>
-                        <p className="text-gray-600 text-sm">Classic puzzle game with modern design</p>
+                        <p className="text-gray-600 text-sm">Classic puzzle game</p>
                     </div>
 
                     {/* TicTacToe+ */}
@@ -94,12 +94,12 @@ const About = () => (
                         <div className="w-20 h-20 mx-auto mb-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                             <img src="/images/tictactoe-icon.png" alt="TicTacToe+ App Icon" className="w-full h-full object-cover" />
                         </div>
-                        <h3 className="text-xl font-medium text-black mb-3">
+                        <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                             <Link href="/tictactoe" className="hover:text-gray-600 transition-colors">
                                 TicTacToe+
                             </Link>
                         </h3>
-                        <p className="text-gray-600 text-sm">Classic strategy game with smart AI</p>
+                        <p className="text-gray-600 text-sm">Classic strategy game</p>
                     </div>
                 </div>
             </div>
