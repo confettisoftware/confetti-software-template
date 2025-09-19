@@ -3,7 +3,7 @@ import ConfettiAnimation from '../components/ConfettiAnimation';
 import StructuredData from '../components/StructuredData';
 import Link from 'next/link';
 import Image from 'next/image';
-import { trackAppStoreClick } from '../utils/analytics';
+import { trackAppStoreClick, trackEmailClick } from '../utils/analytics';
 
 const Home = () => {
     return (
@@ -210,7 +210,24 @@ const Home = () => {
                     </p>
 
                     <div className="flex flex-col items-center justify-center space-y-4">
-                        <p className="text-sm text-gray-600">hello@confettisoftware.com</p>
+                        <div className="flex items-center space-x-2">
+                            <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                />
+                            </svg>
+                            <span className="text-sm text-gray-600">Contact Us:</span>
+                        </div>
+                        <a
+                            href="mailto:hello@confettisoftware.com"
+                            className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors"
+                            onClick={trackEmailClick}
+                        >
+                            hello@confettisoftware.com
+                        </a>
                         <div className="flex items-center justify-center">
                             <a
                                 href="https://apps.apple.com/us/app/math-flash-fast-arithmetic/id6739975541"
