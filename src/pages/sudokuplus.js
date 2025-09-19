@@ -21,13 +21,15 @@ const SudokuPlus = () => {
                             priority
                         />
                     </div>
-                    <div
-                        className="text-3xl sm:text-4xl mb-6"
-                        style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif' }}
+                    <h1
+                        className="text-3xl sm:text-4xl font-bold text-black mb-6"
+                        style={{
+                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
+                            textTransform: 'none'
+                        }}
                     >
-                        <span className="font-bold text-black">Sudoku</span>
-                        <span className="font-light text-gray-500">Plus</span>
-                    </div>
+                        SudokuPlus
+                    </h1>
                     <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Classic puzzle game with modern design</p>
                 </div>
             </div>
