@@ -36,7 +36,7 @@ const Layout = ({
                 <link rel="icon" href="/favicon.svg" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                
+
                 {/* Structured Data */}
                 <script
                     type="application/ld+json"
@@ -114,8 +114,8 @@ const Layout = ({
                 {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
                     <>
                         <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
+                        <Script id="google-analytics" strategy="afterInteractive">
+                            {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
@@ -124,7 +124,7 @@ const Layout = ({
                                     page_location: window.location.href
                                 });
                     `}
-                </Script>
+                        </Script>
                     </>
                 )}
             </div>
