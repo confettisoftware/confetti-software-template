@@ -170,7 +170,6 @@ const Home = () => {
                 </div>
             </section>
 
-
             {/* Footer */}
             <footer className="relative backdrop-blur-2xl bg-gradient-to-b from-white/20 to-white/5 border-t border-white/30 py-16 overflow-hidden">
                 {/* Subtle confetti background */}

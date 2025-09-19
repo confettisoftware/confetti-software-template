@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const About = () => (
     <Layout
-        title="About Confetti Software - Apps That Make Every Moment a Celebration"
-        description="Learn about Confetti Software's mission to create apps that make every moment a celebration. Founded by Joel Boyd, we specialize in beautifully designed mobile apps."
+        title="About Confetti Software - Fun, Simple Apps for iPhone & iPad"
+        description="Learn about Confetti Software - fun, simple mobile apps for iPhone & iPad. Founded by Joel Boyd, we create Math Flash, SudokuPlus, and TicTacToe+."
     >
         {/* Hero Section */}
         <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
@@ -17,7 +17,7 @@ const About = () => (
                 >
                     About
                 </h1>
-                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Creating apps that make every moment a celebration</p>
+                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Fun, simple mobile apps for iPhone & iPad</p>
             </div>
         </div>
 
@@ -37,11 +37,11 @@ const About = () => (
 
                 <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                        At Confetti Software, we believe that every moment can be a celebration. We create beautifully designed mobile apps that bring joy,
+                        At Confetti Software, we create fun, simple mobile apps that bring joy,
                         engagement, and a sense of wonder to everyday experiences.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                        Just like confetti brings celebration and joy to special moments, our apps bring excitement and fun to every interaction. We&apos;re
+                        Our apps bring excitement and fun to every interaction. We&apos;re
                         owned and operated by Joel Boyd, doing business as Confetti Software.
                     </p>
                 </div>
@@ -123,7 +123,7 @@ const About = () => (
                     <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                         <h3 className="text-xl font-medium text-black mb-3">Celebration</h3>
                         <p className="text-gray-700">
-                            We believe every moment can be a celebration. Every app we create is designed to bring joy and wonder to your daily experiences.
+                            Every app we create is designed to bring joy and fun to your daily experiences.
                         </p>
                     </div>
                     <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
