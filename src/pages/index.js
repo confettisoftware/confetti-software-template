@@ -170,10 +170,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Hero Section */}
-            <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
-                <div className="text-center max-w-4xl mx-auto"></div>
-            </div>
 
             {/* Footer */}
             <footer className="relative backdrop-blur-2xl bg-gradient-to-b from-white/20 to-white/5 border-t border-white/30 py-16 overflow-hidden">
