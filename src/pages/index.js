@@ -8,8 +8,8 @@ import { trackAppStoreClick, trackEmailClick } from '../utils/analytics';
 const Home = () => {
     return (
         <Layout
-            title="Confetti Software | Fun, Simple Apps for iPhone & iPad"
-            description="Fun, simple apps for iPhone & iPad. Math Flash, SudokuPlus, and TicTacToe+ on the App Store."
+            title="Confetti Software | Fun Apps for iPhone & iPad"
+            description="Fun apps for iPhone & iPad. Math Flash, SudokuPlus, and TicTacToe+ on the App Store."
         >
             <StructuredData
                 data={{
