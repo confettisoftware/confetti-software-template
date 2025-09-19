@@ -34,19 +34,15 @@ const Home = () => {
             <ConfettiAnimation />
 
             {/* Apps Section */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-12 sm:py-20 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-2xl font-light text-black mb-8 tracking-wider">Our Apps</h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                         {/* Math Flash */}
                         <div className="group">
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/mathflash" className="block">
-                                    <div className="aspect-square bg-gradient-to-br from-blue-50/50 to-blue-100/50 backdrop-blur-sm flex items-center justify-center p-6 sm:p-8">
-                                        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                    <div className="aspect-square bg-gradient-to-br from-blue-50/50 to-blue-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                                        <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/mathflash-icon.png"
                                                 alt="Math Flash App Icon"
@@ -54,12 +50,16 @@ const Home = () => {
                                                 height={96}
                                                 className="w-full h-full object-cover"
                                                 priority
+                                                placeholder="blur"
+                                                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                                             />
                                         </div>
                                     </div>
                                 </Link>
-                                <div className="p-6 backdrop-blur-sm bg-white/10">
-                                    <h3 className="text-lg font-medium text-black mb-3">Math Flash</h3>
+                                <div className="p-4 sm:p-6 backdrop-blur-sm bg-white/10 text-center">
+                                    <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
+                                        Math Flash
+                                    </h3>
                                     <p className="text-sm text-gray-700 mb-4">Quick math practice that sparks joy</p>
                                     <a
                                         href="https://apps.apple.com/us/app/math-flash-fast-arithmetic/id6739975541"
@@ -83,20 +83,24 @@ const Home = () => {
                         <div className="group">
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/sudokuplus" className="block">
-                                    <div className="aspect-square bg-gradient-to-br from-green-50/50 to-green-100/50 backdrop-blur-sm flex items-center justify-center p-6 sm:p-8">
-                                        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                    <div className="aspect-square bg-gradient-to-br from-green-50/50 to-green-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                                        <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/sudokuplus-icon.png"
                                                 alt="SudokuPlus App Icon"
                                                 width={96}
                                                 height={96}
                                                 className="w-full h-full object-cover"
+                                                placeholder="blur"
+                                                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                                             />
                                         </div>
                                     </div>
                                 </Link>
-                                <div className="p-6 backdrop-blur-sm bg-white/10">
-                                    <h3 className="text-lg font-medium text-black mb-3">SudokuPlus</h3>
+                                <div className="p-4 sm:p-6 backdrop-blur-sm bg-white/10 text-center">
+                                    <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
+                                        SudokuPlus
+                                    </h3>
                                     <p className="text-sm text-gray-700 mb-4">Classic puzzle game with modern design</p>
                                     <a
                                         href="https://apps.apple.com/us/app/sudokuplus-pure-logic/id6743255151"
@@ -120,20 +124,24 @@ const Home = () => {
                         <div className="group">
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/tictactoe" className="block">
-                                    <div className="aspect-square bg-gradient-to-br from-purple-50/50 to-purple-100/50 backdrop-blur-sm flex items-center justify-center p-6 sm:p-8">
-                                        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                    <div className="aspect-square bg-gradient-to-br from-purple-50/50 to-purple-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                                        <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/tictactoe-icon.png"
                                                 alt="TicTacToe+ App Icon"
                                                 width={96}
                                                 height={96}
                                                 className="w-full h-full object-cover"
+                                                placeholder="blur"
+                                                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                                             />
                                         </div>
                                     </div>
                                 </Link>
-                                <div className="p-6 backdrop-blur-sm bg-white/10">
-                                    <h3 className="text-lg font-medium text-black mb-3">TicTacToe+</h3>
+                                <div className="p-4 sm:p-6 backdrop-blur-sm bg-white/10 text-center">
+                                    <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
+                                        TicTacToe+
+                                    </h3>
                                     <p className="text-sm text-gray-700 mb-4">Classic strategy game with smart AI</p>
                                     <a
                                         href="https://apps.apple.com/us/app/tictactoe-flux/id6746926512"
@@ -160,7 +168,7 @@ const Home = () => {
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
                     <p className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">Apps that make every moment a celebration</p>
-                    <div className="text-sm text-gray-500 tracking-widest uppercase">Where celebration meets innovation</div>
+                    <div className="text-sm text-gray-500 tracking-widest">Where celebration meets innovation</div>
                 </div>
             </div>
 
@@ -177,33 +185,36 @@ const Home = () => {
 
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
                     <h3
-                        className="text-3xl font-bold text-black mb-0 tracking-tight uppercase"
+                        className="font-bold text-black mb-0"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
-                            fontSize: '28px'
+                            fontSize: '32px',
+                            textTransform: 'none',
+                            letterSpacing: '0.01em'
                         }}
                     >
-                        CONFETTI
+                        Confetti
                     </h3>
                     <p
-                        className="text-base font-light text-gray-500 tracking-wider mb-6 -mt-1"
+                        className="font-light text-gray-500 mb-6 -mt-1"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
-                            fontSize: '16px'
+                            fontSize: '18px',
+                            letterSpacing: '0.06em'
                         }}
                     >
                         SOFTWARE
                     </p>
                     <p className="text-sm text-gray-600 leading-relaxed mb-8">Where celebration meets innovation</p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <div className="flex flex-col items-center justify-center space-y-4">
                         <p className="text-sm text-gray-600">hello@confettisoftware.com</p>
-                        <div className="flex items-center space-x-4">
+                        <div className="flex items-center justify-center">
                             <a
                                 href="https://apps.apple.com/us/app/math-flash-fast-arithmetic/id6739975541"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="opacity-60 hover:opacity-100 transition-opacity"
+                                className="hover:opacity-80 transition-opacity"
                             >
                                 <img
                                     src="/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"

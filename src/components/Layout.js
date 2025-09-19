@@ -38,6 +38,74 @@ const Layout = ({
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link rel="preload" href="/fonts/SF-Pro-Display-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
                 <link rel="preload" href="/fonts/SF-Pro-Text-Light.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+                
+                {/* Structured Data */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "name": "Confetti Software",
+                            "description": "Creating apps that make every moment a celebration, one confetti piece at a time.",
+                            "url": "https://confettisoftware.com",
+                            "logo": "https://confettisoftware.com/favicon.svg",
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "email": "hello@confettisoftware.com",
+                                "contactType": "customer service"
+                            },
+                            "sameAs": [
+                                "https://apps.apple.com/us/developer/confetti-software/id6739975540"
+                            ],
+                            "hasOfferCatalog": {
+                                "@type": "OfferCatalog",
+                                "name": "Mobile Apps",
+                                "itemListElement": [
+                                    {
+                                        "@type": "SoftwareApplication",
+                                        "name": "Math Flash",
+                                        "description": "Quick math practice that sparks joy",
+                                        "url": "https://confettisoftware.com/mathflash",
+                                        "applicationCategory": "EducationalApplication",
+                                        "operatingSystem": "iOS",
+                                        "offers": {
+                                            "@type": "Offer",
+                                            "price": "0",
+                                            "priceCurrency": "USD"
+                                        }
+                                    },
+                                    {
+                                        "@type": "SoftwareApplication",
+                                        "name": "SudokuPlus",
+                                        "description": "Classic puzzle game with modern design",
+                                        "url": "https://confettisoftware.com/sudokuplus",
+                                        "applicationCategory": "GameApplication",
+                                        "operatingSystem": "iOS",
+                                        "offers": {
+                                            "@type": "Offer",
+                                            "price": "0",
+                                            "priceCurrency": "USD"
+                                        }
+                                    },
+                                    {
+                                        "@type": "SoftwareApplication",
+                                        "name": "TicTacToe+",
+                                        "description": "Classic strategy game with smart AI",
+                                        "url": "https://confettisoftware.com/tictactoe",
+                                        "applicationCategory": "GameApplication",
+                                        "operatingSystem": "iOS",
+                                        "offers": {
+                                            "@type": "Offer",
+                                            "price": "0",
+                                            "priceCurrency": "USD"
+                                        }
+                                    }
+                                ]
+                            }
+                        })
+                    }}
+                />
             </Head>
             <div className="min-h-screen bg-white">
                 {/* Navigation Bar */}

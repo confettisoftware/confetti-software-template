@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const SudokuPlus = () => {
     return (
@@ -11,16 +12,22 @@ const SudokuPlus = () => {
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
                     <div className="w-32 h-32 mx-auto mb-12 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
-                        <img src="/images/sudokuplus-icon.png" alt="SudokuPlus App Icon" className="w-full h-full object-cover" />
+                        <Image
+                            src="/images/sudokuplus-icon.png"
+                            alt="SudokuPlus App Icon"
+                            width={128}
+                            height={128}
+                            className="w-full h-full object-cover"
+                            priority
+                        />
                     </div>
-                    <h1
-                        className="text-5xl sm:text-6xl font-bold text-black mb-6"
-                        style={{
-                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
-                        }}
+                    <div
+                        className="text-3xl sm:text-4xl mb-6"
+                        style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif' }}
                     >
-                        SudokuPlus
-                    </h1>
+                        <span className="font-bold text-black">Sudoku</span>
+                        <span className="font-light text-gray-500">Plus</span>
+                    </div>
                     <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Classic puzzle game with modern design</p>
                 </div>
             </div>

@@ -22,9 +22,10 @@ const MathFlash = () => {
                         />
                     </div>
                     <h1
-                        className="text-5xl sm:text-6xl font-bold text-black mb-6"
+                        className="text-3xl sm:text-4xl font-bold text-black mb-6"
                         style={{
-                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
+                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
+                            textTransform: 'none'
                         }}
                     >
                         Math Flash

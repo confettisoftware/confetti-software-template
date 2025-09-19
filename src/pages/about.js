@@ -10,7 +10,7 @@ const About = () => (
         <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
             <div className="text-center max-w-4xl mx-auto">
                 <h1
-                    className="text-5xl sm:text-6xl font-bold text-black mb-4"
+                    className="text-3xl sm:text-4xl font-bold text-black mb-4 uppercase"
                     style={{
                         fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
                     }}
