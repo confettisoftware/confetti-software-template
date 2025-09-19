@@ -51,8 +51,8 @@ const Navbar = () => {
         <nav className="backdrop-blur-xl bg-white/80 border-b border-white/30 sticky top-0 z-50">
             <div className="max-w-6xl mx-auto flex items-center px-4 sm:px-6 py-4 sm:py-6">
                 {/* Mobile Menu Button */}
-                <button 
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+                <button
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     className="sm:hidden text-gray-600 hover:text-black transition-colors"
                     aria-label="Toggle mobile menu"
                     aria-expanded={isMobileMenuOpen}
@@ -71,28 +71,17 @@ const Navbar = () => {
 
                     {/* Apps Hover Menu */}
                     <div className="relative group">
-                        <button className="text-gray-600 hover:text-black transition-colors text-sm font-medium uppercase">
-                            Apps
-                        </button>
+                        <button className="text-gray-600 hover:text-black transition-colors text-sm font-medium uppercase">Apps</button>
 
                         <div className="absolute left-0 mt-2 w-48 backdrop-blur-xl bg-white/90 rounded-xl shadow-2xl border border-white/30 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <div className="py-2">
-                                <Link
-                                    href="/mathflash"
-                                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2"
-                                >
+                                <Link href="/mathflash" className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2">
                                     Math Flash
                                 </Link>
-                                <Link
-                                    href="/sudokuplus"
-                                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2"
-                                >
+                                <Link href="/sudokuplus" className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2">
                                     SudokuPlus
                                 </Link>
-                                <Link
-                                    href="/tictactoe"
-                                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2"
-                                >
+                                <Link href="/tictactoe" className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2">
                                     TicTacToe+
                                 </Link>
                             </div>
@@ -129,8 +118,8 @@ const Navbar = () => {
 
                 {/* Desktop Right Navigation */}
                 <div className="hidden sm:flex items-center space-x-8 flex-1 justify-end">
-                    <button 
-                        onClick={() => setIsSearchOpen(true)} 
+                    <button
+                        onClick={() => setIsSearchOpen(true)}
                         className="text-gray-600 hover:text-black transition-colors"
                         aria-label="Open search"
                         title="Search the website"
@@ -145,8 +134,8 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Search Button */}
-                <button 
-                    onClick={() => setIsSearchOpen(true)} 
+                <button
+                    onClick={() => setIsSearchOpen(true)}
                     className="sm:hidden text-gray-600 hover:text-black transition-colors"
                     aria-label="Open search"
                     title="Search the website"
@@ -159,7 +148,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div 
+                <div
                     id="mobile-menu"
                     className="sm:hidden backdrop-blur-xl bg-white/90 border-t border-white/30"
                     role="menu"
@@ -173,27 +162,33 @@ const Navbar = () => {
                         >
                             About
                         </Link>
-                        <Link
-                            href="/mathflash"
-                            className="block text-gray-600 hover:text-black transition-colors text-sm font-medium"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            Math Flash
-                        </Link>
-                        <Link
-                            href="/sudokuplus"
-                            className="block text-gray-600 hover:text-black transition-colors text-sm font-medium"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            SudokuPlus
-                        </Link>
-                        <Link
-                            href="/tictactoe"
-                            className="block text-gray-600 hover:text-black transition-colors text-sm font-medium"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            TicTacToe+
-                        </Link>
+
+                        {/* Apps Section */}
+                        <div className="space-y-2">
+                            <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Apps</div>
+                            <Link
+                                href="/mathflash"
+                                className="block text-gray-600 hover:text-black transition-colors text-sm font-medium uppercase ml-2"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Math Flash
+                            </Link>
+                            <Link
+                                href="/sudokuplus"
+                                className="block text-gray-600 hover:text-black transition-colors text-sm font-medium uppercase ml-2"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                SudokuPlus
+                            </Link>
+                            <Link
+                                href="/tictactoe"
+                                className="block text-gray-600 hover:text-black transition-colors text-sm font-medium uppercase ml-2"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                TicTacToe+
+                            </Link>
+                        </div>
+
                         <Link
                             href="/support"
                             className="block text-gray-600 hover:text-black transition-colors text-sm font-medium uppercase"
@@ -207,7 +202,7 @@ const Navbar = () => {
 
             {/* Search Modal */}
             {isSearchOpen && (
-                <div 
+                <div
                     className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center pt-20 px-4"
                     role="dialog"
                     aria-modal="true"
@@ -216,7 +211,9 @@ const Navbar = () => {
                     <div className="w-full max-w-2xl backdrop-blur-xl bg-white/90 rounded-2xl shadow-2xl border border-white/30">
                         {/* Search Header */}
                         <div className="flex items-center p-6 border-b border-white/30">
-                            <h2 id="search-title" className="sr-only">Search</h2>
+                            <h2 id="search-title" className="sr-only">
+                                Search
+                            </h2>
                             <div className="flex-1 relative">
                                 <svg
                                     className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"
