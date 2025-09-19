@@ -7,8 +7,8 @@ import Link from 'next/link';
 
 const Layout = ({
     children,
-    title = 'Confetti Software - Apps That Make Every Moment a Celebration',
-    description = 'Creating apps that make every moment a celebration, one confetti piece at a time. Discover our collection of beautifully designed mobile apps.'
+    title = 'Confetti Software | Fun, Simple Apps for iPhone & iPad',
+    description = 'Fun, simple apps for iPhone & iPad. Math Flash, SudokuPlus, and TicTacToe+ on the App Store.'
 }) => {
     return (
         <>
@@ -28,7 +28,7 @@ const Layout = ({
                 <meta property="og:image" content="https://confettisoftware.com/images/og-image.jpg" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:image:alt" content="Confetti Software - Apps That Make Every Moment a Celebration" />
+                <meta property="og:image:alt" content="Confetti Software | Fun, Simple Apps for iPhone & iPad" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
@@ -45,7 +45,7 @@ const Layout = ({
                             '@context': 'https://schema.org',
                             '@type': 'Organization',
                             name: 'Confetti Software',
-                            description: 'Creating apps that make every moment a celebration, one confetti piece at a time.',
+                            description: 'Fun, simple mobile apps.',
                             url: 'https://confettisoftware.com',
                             logo: 'https://confettisoftware.com/favicon.svg',
                             contactPoint: {
