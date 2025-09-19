@@ -17,7 +17,7 @@ const Layout = ({
                 <meta name="description" content={description} />
                 <meta
                     name="keywords"
-                    content="mobile apps, confetti software, math flash, sudoku plus, tictactoe plus, celebration apps, iOS apps, app store, mobile games, puzzle games"
+                    content="mobile apps, confetti software, math flash, sudoku plus, tictactoe plus, iOS apps, app store, mobile games, puzzle games, iPhone apps, iPad apps"
                 />
                 <meta name="author" content="Confetti Software" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,7 +36,7 @@ const Layout = ({
                 <link rel="icon" href="/favicon.svg" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
+                
                 {/* Structured Data */}
                 <script
                     type="application/ld+json"
@@ -114,17 +114,17 @@ const Layout = ({
                 {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
                     <>
                         <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
-                        <Script id="google-analytics" strategy="afterInteractive">
-                            {`
-                                window.dataLayer = window.dataLayer || [];
-                                function gtag(){dataLayer.push(arguments);}
-                                gtag('js', new Date());
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
                                 gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
                                     page_title: document.title,
                                     page_location: window.location.href
                                 });
-                            `}
-                        </Script>
+                    `}
+                </Script>
                     </>
                 )}
             </div>

@@ -171,7 +171,6 @@ const Home = () => {
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
-                    <p className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">Apps that make every moment a celebration</p>
                 </div>
             </div>
 
