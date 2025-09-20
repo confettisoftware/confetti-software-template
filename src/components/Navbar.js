@@ -214,15 +214,15 @@ const Navbar = () => {
                         }
                     }}
                 >
-                    <div className="w-full max-w-2xl backdrop-blur-xl bg-white/90 rounded-2xl shadow-2xl border border-white/30">
+                    <div className="w-full max-w-xl backdrop-blur-xl bg-white/95 rounded-xl shadow-xl border border-white/40">
                         {/* Search Header */}
-                        <div className="flex items-center p-6 border-b border-white/30">
+                        <div className="flex items-center p-4">
                             <h2 id="search-title" className="sr-only">
                                 Search
                             </h2>
                             <div className="flex-1 relative">
                                 <svg
-                                    className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"
+                                    className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -232,7 +232,7 @@ const Navbar = () => {
                                 </svg>
                                 <input
                                     type="text"
-                                    placeholder="Search apps and pages..."
+                                    placeholder="Search..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     onKeyDown={(e) => {
@@ -241,7 +241,7 @@ const Navbar = () => {
                                             setSearchQuery('');
                                         }
                                     }}
-                                    className="w-full pl-10 pr-4 py-3 bg-white/50 border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full pl-9 pr-4 py-2.5 bg-transparent border-none rounded-lg focus:outline-none text-gray-700 placeholder-gray-400"
                                     autoFocus
                                     aria-label="Search input"
                                 />
@@ -251,47 +251,45 @@ const Navbar = () => {
                                     setIsSearchOpen(false);
                                     setSearchQuery('');
                                 }}
-                                className="ml-4 text-gray-400 hover:text-gray-600 transition-colors"
+                                className="ml-3 text-gray-400 hover:text-gray-600 transition-colors p-1"
                                 aria-label="Close search"
                                 title="Close search"
                             >
-                                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </button>
                         </div>
 
                         {/* Search Results */}
-                        <div className="max-h-96 overflow-y-auto">
-                            {searchQuery === '' ? (
-                                <div className="p-6 text-center text-gray-500">
-                                    <p>Start typing to search...</p>
-                                </div>
-                            ) : filteredResults.length > 0 ? (
-                                <div className="py-2">
-                                    {filteredResults.map((item, index) => (
-                                        <Link
-                                            key={index}
-                                            href={item.url}
-                                            className="block px-6 py-4 hover:bg-white/50 transition-colors border-b border-white/20 last:border-b-0"
-                                            onClick={() => {
-                                                setIsSearchOpen(false);
-                                                setSearchQuery('');
-                                            }}
-                                        >
-                                            <h3 className="text-sm font-medium text-black" style={{ textTransform: 'none' }}>
-                                                {item.title}
-                                            </h3>
-                                            <p className="text-xs text-gray-600 mt-1">{item.description}</p>
-                                        </Link>
-                                    ))}
-                                </div>
-                            ) : (
-                                <div className="p-6 text-center text-gray-500">
-                                    <p>No results found for &quot;{searchQuery}&quot;</p>
-                                </div>
-                            )}
-                        </div>
+                        {searchQuery && (
+                            <div className="max-h-80 overflow-y-auto border-t border-white/20">
+                                {filteredResults.length > 0 ? (
+                                    <div className="py-1">
+                                        {filteredResults.map((item, index) => (
+                                            <Link
+                                                key={index}
+                                                href={item.url}
+                                                className="block px-4 py-3 hover:bg-white/60 transition-colors"
+                                                onClick={() => {
+                                                    setIsSearchOpen(false);
+                                                    setSearchQuery('');
+                                                }}
+                                            >
+                                                <h3 className="text-sm font-medium text-gray-800" style={{ textTransform: 'none' }}>
+                                                    {item.title}
+                                                </h3>
+                                                <p className="text-xs text-gray-500 mt-0.5">{item.description}</p>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <div className="p-4 text-center text-gray-500">
+                                        <p className="text-sm">No results found</p>
+                                    </div>
+                                )}
+                            </div>
+                        )}
                     </div>
                 </div>
             )}

@@ -184,27 +184,27 @@ const Home = () => {
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
                     {/* Logo Section */}
                     <div className="mb-8">
-                    <h3
-                        className="font-bold text-black mb-0"
-                        style={{
-                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
+                        <h3
+                            className="font-bold text-black mb-0"
+                            style={{
+                                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
                                 fontSize: '24px',
-                            textTransform: 'none',
-                            letterSpacing: '0.01em'
-                        }}
-                    >
-                        Confetti
-                    </h3>
-                    <p
+                                textTransform: 'none',
+                                letterSpacing: '0.01em'
+                            }}
+                        >
+                            Confetti
+                        </h3>
+                        <p
                             className="font-light text-gray-500 -mt-1"
-                        style={{
-                            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
+                            style={{
+                                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
                                 fontSize: '14px',
-                            letterSpacing: '0.06em'
-                        }}
-                    >
-                        SOFTWARE
-                    </p>
+                                letterSpacing: '0.06em'
+                            }}
+                        >
+                            SOFTWARE
+                        </p>
                     </div>
 
                     {/* Contact Section */}
