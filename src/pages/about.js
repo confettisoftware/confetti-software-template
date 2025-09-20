@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const About = () => (
     <Layout
-        title="About Confetti Software - Fun, Simple Apps for iPhone & iPad"
-        description="Learn about Confetti Software - fun, simple mobile apps for iPhone & iPad. Founded by Joel Boyd, we create Math Flash, SudokuPlus, and TicTacToe+."
+        title="About Confetti Software - Fun Apps for iPhone & iPad"
+        description="Learn about Confetti Software - fun mobile apps for iPhone & iPad. Founded by Joel Boyd, we create Math Flash, SudokuPlus, and TicTacToe+."
     >
         {/* Hero Section */}
         <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
@@ -17,7 +17,7 @@ const About = () => (
                 >
                     About
                 </h1>
-                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Fun, simple mobile apps for iPhone & iPad</p>
+                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Fun mobile apps for iPhone & iPad</p>
             </div>
         </div>
 
@@ -37,7 +37,7 @@ const About = () => (
 
                 <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                        At Confetti Software, we create fun, simple mobile apps that bring joy,
+                        At Confetti Software, we create fun mobile apps that bring joy,
                         engagement, and a sense of wonder to everyday experiences.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
