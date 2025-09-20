@@ -17,6 +17,7 @@ const About = () => (
                 >
                     About
                 </h1>
+                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Math Flash, SudokuPlus, and TicTacToe+ for iPhone & iPad</p>
             </div>
         </div>
 
