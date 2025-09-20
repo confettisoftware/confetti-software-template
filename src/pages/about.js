@@ -7,7 +7,7 @@ const About = () => (
         description="Learn about Confetti Software - creating Math Flash, SudokuPlus, and TicTacToe+. Founded by Joel Boyd, we make learning and gaming enjoyable on iPhone & iPad."
     >
         {/* Hero Section */}
-        <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
+        <div className="py-20 bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
             <div className="text-center max-w-4xl mx-auto">
                 <h1
                     className="text-3xl sm:text-4xl font-bold text-black mb-4 uppercase"
@@ -17,7 +17,6 @@ const About = () => (
                 >
                     About
                 </h1>
-                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Math Flash, SudokuPlus, and TicTacToe+ for iPhone & iPad</p>
             </div>
         </div>
 
