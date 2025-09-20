@@ -4,7 +4,7 @@ import Link from 'next/link';
 const About = () => (
     <Layout
         title="About Confetti Software - Fun Apps for iPhone & iPad"
-        description="Learn about Confetti Software - fun mobile apps for iPhone & iPad. Founded by Joel Boyd, we create Math Flash, SudokuPlus, and TicTacToe+."
+        description="Learn about Confetti Software - creating Math Flash, SudokuPlus, and TicTacToe+. Founded by Joel Boyd, we make learning and gaming enjoyable on iPhone & iPad."
     >
         {/* Hero Section */}
         <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
@@ -17,7 +17,7 @@ const About = () => (
                 >
                     About
                 </h1>
-                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Fun mobile apps for iPhone & iPad</p>
+                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Creating Math Flash, SudokuPlus, and TicTacToe+ — apps that make learning and gaming enjoyable</p>
             </div>
         </div>
 
