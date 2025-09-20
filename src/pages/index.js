@@ -182,11 +182,13 @@ const Home = () => {
                 </div>
 
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                    {/* Logo Section */}
+                    <div className="mb-8">
                     <h3
                         className="font-bold text-black mb-0"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
-                            fontSize: '24px',
+                                fontSize: '24px',
                             textTransform: 'none',
                             letterSpacing: '0.01em'
                         }}
@@ -194,18 +196,20 @@ const Home = () => {
                         Confetti
                     </h3>
                     <p
-                        className="font-light text-gray-500 mb-6 -mt-1"
+                            className="font-light text-gray-500 -mt-1"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
-                            fontSize: '14px',
+                                fontSize: '14px',
                             letterSpacing: '0.06em'
                         }}
                     >
                         SOFTWARE
                     </p>
+                    </div>
 
-                    <div className="flex flex-col items-center justify-center space-y-4">
-                        <div className="flex items-center space-x-2">
+                    {/* Contact Section */}
+                    <div className="mb-8">
+                        <div className="flex items-center justify-center space-x-2 mb-2">
                             <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                     strokeLinecap="round"
@@ -226,7 +230,7 @@ const Home = () => {
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="mt-12 pt-8 border-t border-white/30 text-center">
+                    <div className="pt-6 border-t border-white/30">
                         <p className="text-xs text-gray-500 tracking-wider">© 2025 Confetti Software. All rights reserved.</p>
                     </div>
                 </div>
