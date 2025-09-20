@@ -223,20 +223,6 @@ const Home = () => {
                         >
                             hello@confettisoftware.com
                         </a>
-                        <div className="flex items-center justify-center">
-                            <a
-                                href="https://apps.apple.com/us/app/math-flash-fast-arithmetic/id6739975541"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:opacity-80 transition-opacity"
-                            >
-                                <img
-                                    src="/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-                                    alt="Download on the App Store"
-                                    className="h-6 w-auto"
-                                />
-                            </a>
-                        </div>
                     </div>
 
                     {/* Bottom Bar */}
