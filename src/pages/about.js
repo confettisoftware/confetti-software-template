@@ -36,10 +36,12 @@ const About = () => (
 
                 <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                        We make Math Flash for quick arithmetic practice, SudokuPlus for puzzle solving, and TicTacToe+ for classic strategy gaming.
+                        At Confetti Software, we create fun mobile apps that bring joy,
+                        engagement, and a sense of wonder to everyday experiences.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                        Founded and operated by Joel Boyd, doing business as Confetti Software.
+                        Our apps bring excitement and fun to every interaction. We&apos;re
+                        owned and operated by Joel Boyd, doing business as Confetti Software.
                     </p>
                 </div>
             </div>
