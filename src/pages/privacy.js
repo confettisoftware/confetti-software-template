@@ -44,14 +44,16 @@ const PrivacyPolicy = () => {
                             >
                                 Data Collection
                             </h2>
-                            <p className="text-sm text-gray-600 mb-4">TicTacToe+ displays banner ads using Google AdMob. AdMob may collect:</p>
+                            <p className="text-sm text-gray-600 mb-4">
+                                Some of our apps (including TicTacToe+ and SudokuPlus) display banner ads using Google AdMob. AdMob may collect:
+                            </p>
                             <ul className="list-disc list-inside mb-4 text-sm text-gray-600 space-y-2">
                                 <li>Advertising Identifier (IDFA)</li>
                                 <li>Approximate location (via IP address)</li>
                             </ul>
                             <p className="text-sm text-gray-600">
-                                This data is used solely to serve and measure ads. Confetti Software does not collect, store, or share personal data from
-                                TicTacToe+.
+                                This data is used solely to serve and measure ads. Confetti Software does not collect, store, or share personal data from any of
+                                our apps.
                             </p>
                         </div>
 
@@ -65,7 +67,8 @@ const PrivacyPolicy = () => {
                                 Remove Ads
                             </h2>
                             <p className="text-sm text-gray-600">
-                                TicTacToe+ includes a one-time in-app purchase to remove ads. When ads are removed, no advertising data is collected.
+                                Apps with ads include a one-time in-app purchase to remove ads permanently. When ads are removed, no advertising data is
+                                collected.
                             </p>
                         </div>
 
