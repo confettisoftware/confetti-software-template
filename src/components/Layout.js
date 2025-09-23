@@ -4,12 +4,41 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Navbar from './Navbar';
 import Link from 'next/link';
+import Footer from './sections/Footer';
 
 const Layout = ({
     children,
     title = 'Confetti Software | Fun Apps for iPhone & iPad',
     description = 'Fun apps for iPhone & iPad. Math Flash, SudokuPlus, and TicTacToe+ on the App Store.'
 }) => {
+    // Footer configuration
+    const footerConfig = {
+        primaryLinks: [
+            {
+                type: 'Link',
+                label: 'Privacy',
+                url: '/privacy-policy',
+                altText: 'Privacy Policy'
+            }
+        ],
+        contacts: {
+            type: 'ContactBlock',
+            title: 'Get in Touch',
+            phoneNumber: '',
+            phoneAltText: '',
+            email: 'info@confettisoftware.com',
+            emailAltText: 'Contact Confetti Software',
+            address: '',
+            addressAltText: ''
+        },
+        copyrightText: '© 2024 Confetti Software. Crafting delightful mobile experiences.',
+        styles: {
+            self: {
+                width: 'narrow',
+                padding: ['pt-16', 'pb-16', 'pr-4', 'pl-4']
+            }
+        }
+    };
     return (
         <>
             <Head>
@@ -109,6 +138,9 @@ const Layout = ({
 
                 {/* Main Content */}
                 <main>{children}</main>
+
+                {/* Footer */}
+                <Footer {...footerConfig} />
 
                 {/* Analytics - Only if GA_MEASUREMENT_ID is provided */}
                 {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
