@@ -37,7 +37,7 @@ const Navbar = () => {
         { title: 'About', description: 'Learn about Confetti Software', url: '/about', keywords: 'about, company, team, mission, story' },
         { title: 'Support', description: 'Get help and support', url: '/support', keywords: 'support, help, contact, email, assistance, FAQ' },
         { title: 'Contact', description: 'Get in touch with us', url: '/support', keywords: 'contact, email, reach out, get in touch, hello' },
-        { title: 'Email', description: 'Send us an email', url: '/support', keywords: 'email, mail, contact, message, hello@confettisoftware.com' }
+        { title: 'Email', description: 'Send us an email', url: '/support', keywords: 'email, mail, contact, message, info@confettisoftware.com' }
     ];
 
     const filteredResults = searchData.filter(

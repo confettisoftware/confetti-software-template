@@ -36,12 +36,10 @@ const About = () => (
 
                 <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                        At Confetti Software, we create fun mobile apps that bring joy,
-                        engagement, and a sense of wonder to everyday experiences.
+                        At Confetti Software, we create fun mobile apps that bring joy, engagement, and a sense of wonder to everyday experiences.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                        Our apps bring excitement and fun to every interaction. We&apos;re
-                        owned and operated by Joel Boyd, doing business as Confetti Software.
+                        Our apps bring excitement and fun to every interaction. We&apos;re owned and operated by Joel Boyd, doing business as Confetti Software.
                     </p>
                 </div>
             </div>
@@ -121,9 +119,7 @@ const About = () => (
                 <div className="grid md:grid-cols-2 gap-8">
                     <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                         <h3 className="text-xl font-medium text-black mb-3">Celebration</h3>
-                        <p className="text-gray-700">
-                            Every app we create is designed to bring joy and fun to your daily experiences.
-                        </p>
+                        <p className="text-gray-700">Every app we create is designed to bring joy and fun to your daily experiences.</p>
                     </div>
                     <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                         <h3 className="text-xl font-medium text-black mb-3">Quality First</h3>
@@ -164,10 +160,10 @@ const About = () => (
 
                 <div className="space-y-4">
                     <a
-                        href="mailto:hello@confettisoftware.com"
+                        href="mailto:info@confettisoftware.com"
                         className="inline-block px-8 py-3 backdrop-blur-sm bg-white/20 border border-white/30 text-gray-700 hover:bg-white/30 hover:text-black transition-all duration-200 rounded-xl"
                     >
-                        hello@confettisoftware.com
+                        info@confettisoftware.com
                     </a>
 
                     <div className="pt-4">

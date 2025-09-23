@@ -221,11 +221,11 @@ const Home = () => {
                             <span className="text-sm text-gray-600">Contact Us:</span>
                         </div>
                         <a
-                            href="mailto:hello@confettisoftware.com"
+                            href="mailto:info@confettisoftware.com"
                             className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors"
                             onClick={trackEmailClick}
                         >
-                            hello@confettisoftware.com
+                            info@confettisoftware.com
                         </a>
                     </div>
 

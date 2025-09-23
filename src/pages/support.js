@@ -42,8 +42,8 @@ const Support = () => {
                             <h3 className="text-lg font-medium text-black mb-3">How do I contact support?</h3>
                             <p className="text-sm text-gray-600">
                                 Email us at{' '}
-                                <a href="mailto:hello@confettisoftware.com" className="text-black hover:underline font-medium">
-                                    hello@confettisoftware.com
+                                <a href="mailto:info@confettisoftware.com" className="text-black hover:underline font-medium">
+                                    info@confettisoftware.com
                                 </a>{' '}
                                 and we&apos;ll respond within 24 hours.
                             </p>
@@ -93,10 +93,10 @@ const Support = () => {
 
                     <div className="space-y-4">
                         <a
-                            href="mailto:hello@confettisoftware.com"
+                            href="mailto:info@confettisoftware.com"
                             className="inline-block px-8 py-3 backdrop-blur-sm bg-white/20 border border-white/30 text-gray-700 hover:bg-white/30 hover:text-black transition-all duration-200 rounded-xl"
                         >
-                            hello@confettisoftware.com
+                            info@confettisoftware.com
                         </a>
 
                         <div className="pt-4">
