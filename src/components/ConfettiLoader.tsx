@@ -1,38 +1,27 @@
 import React, { useEffect, useState } from 'react';
 
 const ConfettiLoader: React.FC = () => {
-    const [isMobile, setIsMobile] = useState(false);
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
     useEffect(() => {
-        // Check if device is mobile or has reduced motion preference
-        const checkMobile = () => {
-            const mobile = window.innerWidth <= 768 || 
-                /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            setIsMobile(mobile);
-        };
-        
         const checkReducedMotion = () => {
             const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             setPrefersReducedMotion(reduced);
         };
 
-        checkMobile();
         checkReducedMotion();
 
-        // Listen for resize events
-        window.addEventListener('resize', checkMobile);
+        // Listen for motion preference changes
         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
         mediaQuery.addEventListener('change', checkReducedMotion);
 
         return () => {
-            window.removeEventListener('resize', checkMobile);
             mediaQuery.removeEventListener('change', checkReducedMotion);
         };
     }, []);
 
-    // Show simple loader on mobile or if user prefers reduced motion
-    if (isMobile || prefersReducedMotion) {
+    // Show simple loader only if user prefers reduced motion
+    if (prefersReducedMotion) {
         return (
             <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
                 <div className="text-center">

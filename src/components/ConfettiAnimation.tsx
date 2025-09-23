@@ -15,15 +15,12 @@ const ConfettiAnimation: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Detect if device is mobile or has reduced motion preference
-        const isMobile = typeof window !== 'undefined' && 
-            (window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-        
+        // Only skip if user prefers reduced motion
         const prefersReducedMotion = typeof window !== 'undefined' && 
             window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        // Skip animation on mobile or if user prefers reduced motion
-        if (isMobile || prefersReducedMotion) {
+        // Skip animation only if user prefers reduced motion
+        if (prefersReducedMotion) {
             return;
         }
 

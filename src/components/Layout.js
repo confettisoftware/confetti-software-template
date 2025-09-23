@@ -110,24 +110,6 @@ const Layout = ({
                 {/* Main Content */}
                 <main>{children}</main>
 
-                {/* Simple Footer */}
-                <footer className="bg-white border-t border-gray-200 py-8">
-                    <div className="max-w-4xl mx-auto px-4 text-center">
-                        <div className="mb-4">
-                            <a
-                                href="mailto:info@confettisoftware.com"
-                                className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors mr-6"
-                            >
-                                info@confettisoftware.com
-                            </a>
-                            <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors">
-                                Privacy
-                            </Link>
-                        </div>
-                        <p className="text-xs text-gray-500">© 2024 Confetti Software. All rights reserved.</p>
-                    </div>
-                </footer>
-
                 {/* Analytics - Only if GA_MEASUREMENT_ID is provided */}
                 {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
                     <>
