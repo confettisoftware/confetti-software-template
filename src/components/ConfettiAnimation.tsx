@@ -38,18 +38,18 @@ const ConfettiAnimation: React.FC = () => {
         ];
 
         const generateConfetti = () => {
-            // Reduce piece count for better performance
-            const pieceCount = 25; // Reduced from 50
+            // Original piece count for desktop
+            const pieceCount = 50; // Match your splash screen exactly
             const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
             
             const pieces = Array.from({ length: pieceCount }, (_, i) => ({
                 id: i,
                 color: colors[Math.floor(Math.random() * colors.length)],
-                size: Math.random() * 8 + 4, // 4-12px (reduced from 5-15px)
-                startX: Math.random() * screenWidth,
-                rotation: Math.random() * 360, // Reduced from 720 degrees
-                fallDuration: Math.random() * 0.8 + 1.2, // 1.2-2.0 seconds (reduced)
-                delay: Math.random() * 0.2, // 0-0.2 seconds (reduced)
+                size: Math.random() * 10 + 5, // 5-15px - match your splash screen
+                startX: Math.random() * screenWidth, // Full width like your splash
+                rotation: Math.random() * 720, // 0-720 degrees - match your splash
+                fallDuration: Math.random() * 1 + 1.5, // 1.5-2.5 seconds - match your splash
+                delay: Math.random() * 0.3, // 0-0.3 seconds - match your splash
             }));
 
             setConfettiPieces(pieces);

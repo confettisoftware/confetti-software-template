@@ -70,15 +70,15 @@
     /* Confetti Loader Animation - Optimized */
     @keyframes confetti-spin {
         0% {
-            transform: translate(-50%, -50%) rotate(0deg) translateY(-24px);
+            transform: translate(-50%, -50%) rotate(0deg) translateY(-36px);
         }
         100% {
-            transform: translate(-50%, -50%) rotate(360deg) translateY(-24px);
+            transform: translate(-50%, -50%) rotate(360deg) translateY(-36px);
         }
     }
 
     .animate-spin-slow {
-        animation: confetti-spin 2s ease-in-out infinite;
+        animation: confetti-spin 3s ease-in-out infinite;
         will-change: transform;
         backface-visibility: hidden;
     }

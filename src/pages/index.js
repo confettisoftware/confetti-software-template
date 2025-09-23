@@ -227,6 +227,11 @@ const Home = () => {
                         >
                             info@confettisoftware.com
                         </a>
+                        <div className="mt-2">
+                            <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors">
+                                Privacy
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Bottom Bar */}

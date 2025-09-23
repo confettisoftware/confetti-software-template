@@ -4,41 +4,12 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Navbar from './Navbar';
 import Link from 'next/link';
-import Footer from './sections/Footer';
 
 const Layout = ({
     children,
     title = 'Confetti Software | Fun Apps for iPhone & iPad',
     description = 'Fun apps for iPhone & iPad. Math Flash, SudokuPlus, and TicTacToe+ on the App Store.'
 }) => {
-    // Footer configuration
-    const footerConfig = {
-        primaryLinks: [
-            {
-                type: 'Link',
-                label: 'Privacy',
-                url: '/privacy-policy',
-                altText: 'Privacy Policy'
-            }
-        ],
-        contacts: {
-            type: 'ContactBlock',
-            title: 'Get in Touch',
-            phoneNumber: '',
-            phoneAltText: '',
-            email: 'info@confettisoftware.com',
-            emailAltText: 'Contact Confetti Software',
-            address: '',
-            addressAltText: ''
-        },
-        copyrightText: '© 2024 Confetti Software. Crafting delightful mobile experiences.',
-        styles: {
-            self: {
-                width: 'narrow',
-                padding: ['pt-16', 'pb-16', 'pr-4', 'pl-4']
-            }
-        }
-    };
     return (
         <>
             <Head>
@@ -139,8 +110,23 @@ const Layout = ({
                 {/* Main Content */}
                 <main>{children}</main>
 
-                {/* Footer */}
-                <Footer {...footerConfig} />
+                {/* Simple Footer */}
+                <footer className="bg-white border-t border-gray-200 py-8">
+                    <div className="max-w-4xl mx-auto px-4 text-center">
+                        <div className="mb-4">
+                            <a
+                                href="mailto:info@confettisoftware.com"
+                                className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors mr-6"
+                            >
+                                info@confettisoftware.com
+                            </a>
+                            <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors">
+                                Privacy
+                            </Link>
+                        </div>
+                        <p className="text-xs text-gray-500">© 2024 Confetti Software. All rights reserved.</p>
+                    </div>
+                </footer>
 
                 {/* Analytics - Only if GA_MEASUREMENT_ID is provided */}
                 {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
