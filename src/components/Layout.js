@@ -50,7 +50,7 @@ const Layout = ({
                             logo: 'https://confettisoftware.com/favicon.svg',
                             contactPoint: {
                                 '@type': 'ContactPoint',
-                                email: 'hello@confettisoftware.com',
+                                email: 'info@confettisoftware.com',
                                 contactType: 'customer service'
                             },
                             sameAs: ['https://apps.apple.com/us/developer/confetti-software/id6739975540'],

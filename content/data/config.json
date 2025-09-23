@@ -77,6 +77,12 @@
                 "label": "TicTacToe+",
                 "url": "/tictactoe",
                 "altText": "TicTacToe+ app"
+            },
+            {
+                "type": "Link",
+                "label": "Privacy Policy",
+                "url": "/privacy-policy",
+                "altText": "Privacy Policy"
             }
         ],
         "contacts": {
@@ -84,7 +90,7 @@
             "title": "Get in Touch",
             "phoneNumber": "",
             "phoneAltText": "",
-            "email": "hello@confettisoftware.com",
+            "email": "info@confettisoftware.com",
             "emailAltText": "Contact Confetti Software",
             "address": "",
             "addressAltText": ""
