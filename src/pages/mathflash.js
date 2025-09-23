@@ -11,14 +11,16 @@ const MathFlash = () => {
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
-                    <div className="w-28 h-28 mx-auto mb-12 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                    <div className="w-28 h-28 mx-auto mb-12 rounded-2xl bg-white/90 border border-white/40 shadow-2xl overflow-hidden sm:backdrop-blur-md sm:bg-white/30">
                         <Image
-                            src="/images/mathflash-icon.png"
+                            src="/images/mathflash-icon-optimized.png"
                             alt="Math Flash App Icon"
-                            width={128}
-                            height={128}
+                            width={256}
+                            height={256}
                             className="w-full h-full object-cover"
                             priority
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                         />
                     </div>
                     <h1

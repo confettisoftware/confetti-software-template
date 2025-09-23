@@ -45,7 +45,7 @@ const Home = () => {
                                     <div className="aspect-square bg-gradient-to-br from-blue-50/50 to-blue-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
                                         <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
-                                                src="/images/mathflash-icon.png"
+                                                src="/images/mathflash-icon-optimized.png"
                                                 alt="Math Flash App Icon"
                                                 width={112}
                                                 height={112}
@@ -88,7 +88,7 @@ const Home = () => {
                                     <div className="aspect-square bg-gradient-to-br from-green-50/50 to-green-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
                                         <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
-                                                src="/images/sudokuplus-icon.png"
+                                                src="/images/sudokuplus-icon-optimized.png"
                                                 alt="SudokuPlus App Icon"
                                                 width={112}
                                                 height={112}
@@ -131,7 +131,7 @@ const Home = () => {
                                     <div className="aspect-square bg-gradient-to-br from-purple-50/50 to-purple-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
                                         <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
-                                                src="/images/tictactoe-icon.png"
+                                                src="/images/tictactoe-icon-optimized.png"
                                                 alt="TicTacToe+ App Icon"
                                                 width={112}
                                                 height={112}

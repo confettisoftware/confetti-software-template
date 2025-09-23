@@ -63,7 +63,7 @@ const About = () => (
                     {/* Math Flash */}
                     <div className="text-center backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                         <div className="w-20 h-20 mx-auto mb-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
-                            <img src="/images/mathflash-icon.png" alt="Math Flash App Icon" className="w-full h-full object-cover" />
+                            <img src="/images/mathflash-icon-optimized.png" alt="Math Flash App Icon" className="w-full h-full object-cover" />
                         </div>
                         <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                             <Link href="/mathflash" className="hover:text-gray-600 transition-colors">
@@ -76,7 +76,7 @@ const About = () => (
                     {/* SudokuPlus */}
                     <div className="text-center backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                         <div className="w-20 h-20 mx-auto mb-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
-                            <img src="/images/sudokuplus-icon.png" alt="SudokuPlus App Icon" className="w-full h-full object-cover" />
+                            <img src="/images/sudokuplus-icon-optimized.png" alt="SudokuPlus App Icon" className="w-full h-full object-cover" />
                         </div>
                         <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                             <Link href="/sudokuplus" className="hover:text-gray-600 transition-colors">
@@ -89,7 +89,7 @@ const About = () => (
                     {/* TicTacToe+ */}
                     <div className="text-center backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                         <div className="w-20 h-20 mx-auto mb-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
-                            <img src="/images/tictactoe-icon.png" alt="TicTacToe+ App Icon" className="w-full h-full object-cover" />
+                            <img src="/images/tictactoe-icon-optimized.png" alt="TicTacToe+ App Icon" className="w-full h-full object-cover" />
                         </div>
                         <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                             <Link href="/tictactoe" className="hover:text-gray-600 transition-colors">

@@ -13,7 +13,7 @@ const SudokuPlus = () => {
                 <div className="text-center max-w-4xl mx-auto">
                     <div className="w-28 h-28 mx-auto mb-12 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                         <Image
-                            src="/images/sudokuplus-icon.png"
+                            src="/images/sudokuplus-icon-optimized.png"
                             alt="SudokuPlus App Icon"
                             width={128}
                             height={128}
