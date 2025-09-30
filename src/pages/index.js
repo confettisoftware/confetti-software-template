@@ -43,7 +43,7 @@ const Home = () => {
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/mathflash" className="block">
                                     <div className="aspect-square bg-gradient-to-br from-blue-50/50 to-blue-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
-                                        <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/mathflash-icon-optimized.png"
                                                 alt="Math Flash App Icon"
@@ -57,8 +57,8 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </Link>
-                                <div className="p-5 sm:p-7 backdrop-blur-sm bg-white/10 text-center">
-                                    <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
+                                <div className="p-4 sm:p-6 backdrop-blur-sm bg-white/10 text-center">
+                                    <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                                         Math Flash
                                     </h3>
                                     <p className="text-sm text-gray-700 mb-4">Quick math practice</p>
@@ -74,7 +74,7 @@ const Home = () => {
                                             alt="Download on the App Store"
                                             width={120}
                                             height={40}
-                                            className="h-9 w-auto hover:opacity-80 transition-opacity"
+                                            className="h-8 w-auto hover:opacity-80 transition-opacity"
                                         />
                                     </a>
                                 </div>
@@ -86,7 +86,7 @@ const Home = () => {
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/sudokuplus" className="block">
                                     <div className="aspect-square bg-gradient-to-br from-green-50/50 to-green-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
-                                        <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/sudokuplus-icon-optimized.png"
                                                 alt="SudokuPlus App Icon"
@@ -100,8 +100,8 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </Link>
-                                <div className="p-5 sm:p-7 backdrop-blur-sm bg-white/10 text-center">
-                                    <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
+                                <div className="p-4 sm:p-6 backdrop-blur-sm bg-white/10 text-center">
+                                    <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                                         SudokuPlus
                                     </h3>
                                     <p className="text-sm text-gray-700 mb-4">Classic puzzle game</p>
@@ -117,7 +117,7 @@ const Home = () => {
                                             alt="Download on the App Store"
                                             width={120}
                                             height={40}
-                                            className="h-9 w-auto hover:opacity-80 transition-opacity"
+                                            className="h-8 w-auto hover:opacity-80 transition-opacity"
                                         />
                                     </a>
                                 </div>
@@ -129,7 +129,7 @@ const Home = () => {
                             <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
                                 <Link href="/tictactoe" className="block">
                                     <div className="aspect-square bg-gradient-to-br from-purple-50/50 to-purple-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
-                                        <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
                                             <Image
                                                 src="/images/tictactoe-icon-optimized.png"
                                                 alt="TicTacToe+ App Icon"
@@ -143,8 +143,8 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </Link>
-                                <div className="p-5 sm:p-7 backdrop-blur-sm bg-white/10 text-center">
-                                    <h3 className="text-xl font-medium text-black mb-3" style={{ textTransform: 'none' }}>
+                                <div className="p-4 sm:p-6 backdrop-blur-sm bg-white/10 text-center">
+                                    <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                                         TicTacToe+
                                     </h3>
                                     <p className="text-sm text-gray-700 mb-4">Classic strategy game</p>
@@ -160,7 +160,7 @@ const Home = () => {
                                             alt="Download on the App Store"
                                             width={120}
                                             height={40}
-                                            className="h-9 w-auto hover:opacity-80 transition-opacity"
+                                            className="h-8 w-auto hover:opacity-80 transition-opacity"
                                         />
                                     </a>
                                 </div>
