@@ -183,12 +183,12 @@ const Home = () => {
 
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
                     {/* Logo Section */}
-                    <div className="mb-8">
+                    <div className="mb-6">
                         <h3
                             className="font-bold text-black mb-0"
                             style={{
                                 fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
-                                fontSize: '24px',
+                                fontSize: '20px',
                                 textTransform: 'none',
                                 letterSpacing: '0.01em'
                             }}
@@ -199,7 +199,7 @@ const Home = () => {
                             className="font-light text-gray-500 -mt-1"
                             style={{
                                 fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif',
-                                fontSize: '14px',
+                                fontSize: '11px',
                                 letterSpacing: '0.06em'
                             }}
                         >
@@ -207,10 +207,14 @@ const Home = () => {
                         </p>
                     </div>
 
-                    {/* Contact Section */}
-                    <div className="mb-8">
-                        <div className="flex items-center justify-center space-x-2 mb-2">
-                            <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {/* Contact & Links Section */}
+                    <div className="mb-6 space-y-3">
+                        <a
+                            href="mailto:info@confettisoftware.com"
+                            className="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors"
+                            onClick={trackEmailClick}
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
@@ -218,16 +222,9 @@ const Home = () => {
                                     d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                 />
                             </svg>
-                            <span className="text-sm text-gray-600">Contact Us:</span>
-                        </div>
-                        <a
-                            href="mailto:info@confettisoftware.com"
-                            className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors"
-                            onClick={trackEmailClick}
-                        >
-                            info@confettisoftware.com
+                            <span>info@confettisoftware.com</span>
                         </a>
-                        <div className="mt-2">
+                        <div>
                             <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors">
                                 Privacy
                             </Link>
@@ -235,7 +232,7 @@ const Home = () => {
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="pt-6 border-t border-white/30">
+                    <div className="pt-4 border-t border-white/30">
                         <p className="text-xs text-gray-500 tracking-wider">© 2025 Confetti Software. All rights reserved.</p>
                     </div>
                 </div>

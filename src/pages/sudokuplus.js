@@ -39,7 +39,7 @@ const SudokuPlus = () => {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6">
                     <div className="text-center mb-16">
                         <h2
-                            className="text-2xl font-light text-black mb-8 tracking-wider"
+                            className="text-3xl font-light text-black mb-8 tracking-wider"
                             style={{
                                 fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
                             }}

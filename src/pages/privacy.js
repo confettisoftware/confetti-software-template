@@ -4,7 +4,7 @@ import Link from 'next/link';
 const PrivacyPolicy = () => {
     return (
         <Layout
-            title="Privacy Policy - Confetti Software"
+            title="Privacy - Confetti Software"
             description="Privacy Policy for Confetti Software apps. Learn how we protect your data and respect your privacy in Math Flash, SudokuPlus, and TicTacToe+."
         >
             {/* Hero Section */}
@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
                             textTransform: 'none'
                         }}
                     >
-                        Privacy Policy
+                        Privacy
                     </h1>
                     <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Your privacy matters to us</p>
                     <p className="text-sm text-gray-500 mb-12">Last Updated: June 18, 2025</p>
