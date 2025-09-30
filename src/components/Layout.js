@@ -37,6 +37,9 @@ const Layout = ({
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
+                {/* Preload critical images for mobile performance */}
+                <link rel="preload" as="image" href="/images/mathflash-icon-optimized.png" />
+
                 {/* Structured Data */}
                 <script
                     type="application/ld+json"
