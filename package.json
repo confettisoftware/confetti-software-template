@@ -8,6 +8,8 @@
       "export": "next export"
     },
     "dependencies": {
+      "@netlify/functions": "^2.6.0",
+      "apn": "^2.2.0",
       "classnames": "^2.5.1",
       "dayjs": "^1.11.11",
       "front-matter": "^4.0.2",
@@ -22,6 +24,7 @@
       "@stackbit/cms-git": "^1.0.1",
       "@stackbit/types": "^2.0.1",
       "@types/glob": "^8.1.0",
+      "@types/node": "^20.0.0",
       "@types/react": "^18.3.3",
       "@types/react-syntax-highlighter": "^15.5.13",
       "autoprefixer": "^10.4.19",

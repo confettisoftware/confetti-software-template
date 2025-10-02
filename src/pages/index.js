@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <Layout
             title="Confetti Software | Fun Apps for iPhone & iPad"
-            description="Fun apps for iPhone & iPad. Math Flash, SudokuPlus, and TicTacToe+ on the App Store."
+            description="Fun apps for iPhone & iPad. Math Flash, SudokuPlus, TicTacToe+, and LineWatch on the App Store."
         >
             <StructuredData
                 data={{
@@ -165,6 +165,35 @@ const Home = () => {
                                             className="h-8 w-auto hover:opacity-80 transition-opacity"
                                         />
                                     </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* LineWatch */}
+                        <div className="group">
+                            <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                                <Link href="/linewatch" className="block">
+                                    <div className="aspect-square bg-gradient-to-br from-blue-50/50 to-purple-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                            <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                                                <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={2}
+                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <div className="p-4 sm:p-6 backdrop-blur-sm bg-white/10 text-center">
+                                    <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
+                                        LineWatch
+                                    </h3>
+                                    <p className="text-sm text-gray-700 mb-4">Disney ride wait alerts</p>
+                                    <div className="text-xs text-gray-500 bg-gray-100 rounded-lg px-3 py-2 inline-block">Coming Soon</div>
                                 </div>
                             </div>
                         </div>

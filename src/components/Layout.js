@@ -99,6 +99,19 @@ const Layout = ({
                                             price: '0',
                                             priceCurrency: 'USD'
                                         }
+                                    },
+                                    {
+                                        '@type': 'SoftwareApplication',
+                                        name: 'LineWatch',
+                                        description: 'Disney ride wait time alerts',
+                                        url: 'https://confettisoftware.com/linewatch',
+                                        applicationCategory: 'LifestyleApplication',
+                                        operatingSystem: 'iOS',
+                                        offers: {
+                                            '@type': 'Offer',
+                                            price: '0',
+                                            priceCurrency: 'USD'
+                                        }
                                     }
                                 ]
                             }
