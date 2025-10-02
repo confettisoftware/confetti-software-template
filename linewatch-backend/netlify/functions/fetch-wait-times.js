@@ -1,4 +1,5 @@
 const { Handler } = require('@netlify/functions');
+const https = require('https');
 
 // Real Queue Times API endpoints
 const QUEUE_TIMES_API = {
@@ -6,14 +7,27 @@ const QUEUE_TIMES_API = {
     waitTimes: (parkId) => `https://queue-times.com/parks/${parkId}/queue_times.json`
 };
 
+// Function to make HTTPS requests (Node.js compatible)
+function makeRequest(url) {
+    return new Promise((resolve, reject) => {
+        https.get(url, (response) => {
+            let data = '';
+            response.on('data', (chunk) => data += chunk);
+            response.on('end', () => {
+                try {
+                    resolve(JSON.parse(data));
+                } catch (error) {
+                    reject(error);
+                }
+            });
+        }).on('error', reject);
+    });
+}
+
 // Function to fetch real data from Queue Times API
 async function fetchRealWaitTimes(parkId) {
     try {
-        const response = await fetch(QUEUE_TIMES_API.waitTimes(parkId));
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
+        const data = await makeRequest(QUEUE_TIMES_API.waitTimes(parkId));
         
         // Transform Queue Times format to our format
         const rides = [];
@@ -49,11 +63,7 @@ async function fetchRealWaitTimes(parkId) {
 // Function to get list of available parks
 async function fetchAvailableParks() {
     try {
-        const response = await fetch(QUEUE_TIMES_API.parks);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
+        const data = await makeRequest(QUEUE_TIMES_API.parks);
         return data;
     } catch (error) {
         console.error('Error fetching parks:', error);
