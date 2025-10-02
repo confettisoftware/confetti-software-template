@@ -8,9 +8,10 @@
   },
   "dependencies": {
     "@netlify/functions": "^2.6.0",
-    "apn": "^2.2.0"
+    "node-apn": "^2.2.0"
   },
   "keywords": ["linewatch", "disney", "notifications", "apns"],
   "author": "Confetti Software",
   "license": "MIT"
 }
+
