@@ -3,9 +3,22 @@ const apn = require('apn');
 
 // Initialize APN provider
 const createAPNProvider = () => {
+  // Debug environment variables
+  console.log('APNS_KEY_ID:', process.env.APNS_KEY_ID ? 'Set' : 'Not set');
+  console.log('APNS_TEAM_ID:', process.env.APNS_TEAM_ID ? 'Set' : 'Not set');
+  console.log('APNS_BUNDLE_ID:', process.env.APNS_BUNDLE_ID ? 'Set' : 'Not set');
+  console.log('APNS_KEY_P8 length:', process.env.APNS_KEY_P8 ? process.env.APNS_KEY_P8.length : 'Not set');
+  console.log('NODE_ENV:', process.env.NODE_ENV);
+  
+  // Ensure the key is properly formatted
+  let key = process.env.APNS_KEY_P8;
+  if (!key.includes('BEGIN PRIVATE KEY')) {
+    key = `-----BEGIN PRIVATE KEY-----\n${key}\n-----END PRIVATE KEY-----`;
+  }
+  
   const options = {
     token: {
-      key: process.env.APNS_KEY_P8,
+      key: key,
       keyId: process.env.APNS_KEY_ID,
       teamId: process.env.APNS_TEAM_ID,
     },
