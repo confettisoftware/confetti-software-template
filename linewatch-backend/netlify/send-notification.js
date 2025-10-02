@@ -66,7 +66,6 @@ const handler = async (event, context) => {
                 note: 'APNs integration temporarily disabled for testing'
             })
         };
-
     } catch (error) {
         console.error('Error in send-notification:', error);
 

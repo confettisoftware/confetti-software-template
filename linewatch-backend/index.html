@@ -30,6 +30,18 @@
         <h3>GET /api/debug-env</h3>
         <p>Debug environment variables (development only)</p>
     </div>
+    
+    <div class="endpoint">
+        <h3>GET /api/fetch-wait-times</h3>
+        <p>Fetch current Disney ride wait times</p>
+        <p><strong>Query params:</strong> <code>?parkId=75ea578a-adc8-4116-a54d-dccb60765ef9&rideIds=ride1,ride2,ride3</code></p>
+    </div>
+    
+    <div class="endpoint">
+        <h3>POST /api/monitor-wait-times</h3>
+        <p>Monitor wait times and send notifications when thresholds are met</p>
+        <p><strong>Body:</strong> <code>{"deviceToken": "token", "preferences": [{"rideId": "space-mountain", "maxWaitTime": 30}]}</code></p>
+    </div>
 </body>
 </html>
 
