@@ -80,7 +80,7 @@ const LineWatch = () => {
                                 Real-Time Data
                             </h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                Live wait time data from Disney&apos;s official systems keeps you informed of current conditions.
+                                Live wait time data from Disney&apos;s official systems keeps you informed of current conditions. Data provided by <a href="https://queue-times.com/en-US" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Queue-Times.com</a>.
                             </p>
                         </div>
 
@@ -271,6 +271,24 @@ const LineWatch = () => {
                             <p className="text-sm text-gray-600">Coming soon to iOS</p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Attribution Section */}
+            <section className="py-12 bg-gray-100">
+                <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
+                    <p className="text-sm text-gray-600">
+                        Wait time data provided by{' '}
+                        <a 
+                            href="https://queue-times.com/en-US" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-blue-600 hover:text-blue-800 underline font-medium"
+                        >
+                            Queue-Times.com
+                        </a>
+                        {' '}• Supporting theme parks worldwide with real-time wait time information
+                    </p>
                 </div>
             </section>
 
