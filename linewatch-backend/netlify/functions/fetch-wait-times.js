@@ -1,5 +1,66 @@
 const { Handler } = require('@netlify/functions');
 
+// Real Queue Times API endpoints
+const QUEUE_TIMES_API = {
+    parks: 'https://queue-times.com/parks.json',
+    waitTimes: (parkId) => `https://queue-times.com/parks/${parkId}/queue_times.json`
+};
+
+// Function to fetch real data from Queue Times API
+async function fetchRealWaitTimes(parkId) {
+    try {
+        const response = await fetch(QUEUE_TIMES_API.waitTimes(parkId));
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        
+        // Transform Queue Times format to our format
+        const rides = [];
+        if (data.lands) {
+            data.lands.forEach(land => {
+                if (land.rides) {
+                    land.rides.forEach(ride => {
+                        rides.push({
+                            id: ride.id.toString(),
+                            name: ride.name,
+                            waitTime: ride.wait_time || 0,
+                            status: ride.is_open ? 'operating' : 'closed',
+                            lastUpdate: ride.last_updated
+                        });
+                    });
+                }
+            });
+        }
+        
+        return {
+            parkId: parkId,
+            parkName: `Park ${parkId}`,
+            timestamp: new Date().toISOString(),
+            rides: rides,
+            source: 'Queue Times API'
+        };
+    } catch (error) {
+        console.error('Error fetching real wait times:', error);
+        return null;
+    }
+}
+
+// Function to get list of available parks
+async function fetchAvailableParks() {
+    try {
+        const response = await fetch(QUEUE_TIMES_API.parks);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching parks:', error);
+        return null;
+    }
+}
+
 const handler = async (event, context) => {
     // Handle CORS preflight requests
     if (event.httpMethod === 'OPTIONS') {
@@ -15,22 +76,57 @@ const handler = async (event, context) => {
     }
 
     try {
-        const { parkId, rideIds } = event.queryStringParameters || {};
+        const { parkId, rideIds, useRealApi } = event.queryStringParameters || {};
 
-        // Disney World Magic Kingdom park ID (example)
-        const defaultParkId = parkId || '75ea578a-adc8-4116-a54d-dccb60765ef9';
-        
-        // Default popular rides if none specified
-        const defaultRideIds = rideIds ? rideIds.split(',') : [
-            '75ea578a-adc8-4116-a54d-dccb60765ef9', // Space Mountain
-            '75ea578a-adc8-4116-a54d-dccb60765ef9', // Seven Dwarfs Mine Train
-            '75ea578a-adc8-4116-a54d-dccb60765ef9'  // Big Thunder Mountain
-        ];
+        // If requesting parks list
+        if (event.path === '/api/fetch-wait-times/parks') {
+            const parks = await fetchAvailableParks();
+            if (parks) {
+                return {
+                    statusCode: 200,
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        success: true,
+                        message: 'Available parks fetched successfully',
+                        data: parks,
+                        attribution: 'Powered by Queue-Times.com'
+                    })
+                };
+            }
+        }
 
-        // For now, return mock data - we'll replace this with real Queue Times API calls
+        // Try to use real API if requested and parkId is provided
+        if (useRealApi === 'true' && parkId) {
+            const realData = await fetchRealWaitTimes(parkId);
+            if (realData) {
+                // Filter rides if specific rideIds requested
+                if (rideIds) {
+                    const requestedRideIds = rideIds.split(',');
+                    realData.rides = realData.rides.filter(ride => requestedRideIds.includes(ride.id));
+                }
+
+                return {
+                    statusCode: 200,
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        success: true,
+                        data: realData,
+                        attribution: 'Powered by Queue-Times.com'
+                    })
+                };
+            }
+        }
+
+        // Fallback to mock data
         const mockWaitTimes = {
-            parkId: defaultParkId,
-            parkName: 'Magic Kingdom',
+            parkId: parkId || 'mock-park',
+            parkName: 'Magic Kingdom (Mock Data)',
             timestamp: new Date().toISOString(),
             rides: [
                 {
@@ -68,8 +164,15 @@ const handler = async (event, context) => {
                     status: 'operating',
                     lastUpdate: new Date().toISOString()
                 }
-            ]
+            ],
+            source: 'Mock data'
         };
+
+        // Filter rides if specific rideIds requested
+        if (rideIds) {
+            const requestedRideIds = rideIds.split(',');
+            mockWaitTimes.rides = mockWaitTimes.rides.filter(ride => requestedRideIds.includes(ride.id));
+        }
 
         return {
             statusCode: 200,
@@ -80,13 +183,13 @@ const handler = async (event, context) => {
             body: JSON.stringify({
                 success: true,
                 data: mockWaitTimes,
-                note: 'Using mock data - Queue Times API integration pending'
+                note: 'Using mock data - add ?useRealApi=true&parkId=<id> for real data',
+                attribution: 'Powered by Queue-Times.com'
             })
         };
-
     } catch (error) {
         console.error('Error fetching wait times:', error);
-        
+
         return {
             statusCode: 500,
             headers: {

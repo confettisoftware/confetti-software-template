@@ -57,9 +57,9 @@ const handler = async (event, context) => {
         // Check each user preference against current wait times
         for (const preference of preferences) {
             const { rideId, maxWaitTime } = preference;
-            
+
             // Find the ride in current wait times
-            const ride = rides.find(r => r.id === rideId);
+            const ride = rides.find((r) => r.id === rideId);
             if (!ride) continue;
 
             // Check if wait time is below threshold
@@ -116,10 +116,9 @@ const handler = async (event, context) => {
                 results
             })
         };
-
     } catch (error) {
         console.error('Error monitoring wait times:', error);
-        
+
         return {
             statusCode: 500,
             headers: {

@@ -33,8 +33,26 @@
     
     <div class="endpoint">
         <h3>GET /api/fetch-wait-times</h3>
-        <p>Fetch current Disney ride wait times</p>
-        <p><strong>Query params:</strong> <code>?parkId=75ea578a-adc8-4116-a54d-dccb60765ef9&rideIds=ride1,ride2,ride3</code></p>
+        <p>Fetch current theme park ride wait times</p>
+        <p><strong>Query params:</strong></p>
+        <ul>
+            <li><code>parkId</code> (optional) - Park ID to fetch wait times for</li>
+            <li><code>rideIds</code> (optional) - Comma-separated list of ride IDs to filter</li>
+            <li><code>useRealApi</code> (optional) - Set to 'true' to use real Queue Times API data</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li><code>/api/fetch-wait-times</code> - Mock data (default)</li>
+            <li><code>/api/fetch-wait-times?useRealApi=true&parkId=2</code> - Real data from Thorpe Park</li>
+            <li><code>/api/fetch-wait-times?parkId=magic-kingdom&rideIds=space-mountain,haunted-mansion</code> - Filtered mock data</li>
+        </ul>
+    </div>
+    
+    <div class="endpoint">
+        <h3>GET /api/fetch-wait-times/parks</h3>
+        <p>Get list of all available parks from Queue Times API</p>
+        <p><strong>Returns:</strong> Complete list of parks with IDs, names, locations, and timezones</p>
+        <p><strong>Attribution:</strong> Data provided by Queue-Times.com</p>
     </div>
     
     <div class="endpoint">
@@ -42,6 +60,11 @@
         <p>Monitor wait times and send notifications when thresholds are met</p>
         <p><strong>Body:</strong> <code>{"deviceToken": "token", "preferences": [{"rideId": "space-mountain", "maxWaitTime": 30}]}</code></p>
     </div>
+    
+    <hr style="margin: 40px 0;">
+    <p style="text-align: center; color: #666; font-size: 14px;">
+        <strong>Attribution:</strong> Wait time data provided by <a href="https://queue-times.com/en-US" target="_blank">Queue-Times.com</a>
+    </p>
 </body>
 </html>
 
