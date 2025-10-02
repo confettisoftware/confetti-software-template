@@ -5,7 +5,7 @@ const apn = require('apn');
 const createAPNProvider = () => {
   const options = {
     token: {
-      key: Buffer.from(process.env.APNS_KEY_P8, 'utf8'),
+      key: process.env.APNS_KEY_P8,
       keyId: process.env.APNS_KEY_ID,
       teamId: process.env.APNS_TEAM_ID,
     },
