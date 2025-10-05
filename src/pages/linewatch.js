@@ -2,11 +2,11 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const LineWatch+ = () => {
+const LineWatchPlus = () => {
     return (
         <Layout
-            title="LineWatch++ - Disney Ride Wait Time Alerts | Confetti Software"
-            description="LineWatch++ is a mobile app that sends push notifications when Disney ride wait times drop below your threshold. Never wait in long lines again with smart alerts."
+            title="LineWatch+ - Disney Ride Wait Time Alerts | Confetti Software"
+            description="LineWatch+ is a mobile app that sends push notifications when Disney ride wait times drop below your threshold. Never wait in long lines again with smart alerts."
         >
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
@@ -334,4 +334,4 @@ const LineWatch+ = () => {
     );
 };
 
-export default LineWatch+;
+export default LineWatchPlus;
