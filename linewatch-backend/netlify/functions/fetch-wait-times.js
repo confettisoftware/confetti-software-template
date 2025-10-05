@@ -10,17 +10,19 @@ const QUEUE_TIMES_API = {
 // Function to make HTTPS requests (Node.js compatible)
 function makeRequest(url) {
     return new Promise((resolve, reject) => {
-        https.get(url, (response) => {
-            let data = '';
-            response.on('data', (chunk) => data += chunk);
-            response.on('end', () => {
-                try {
-                    resolve(JSON.parse(data));
-                } catch (error) {
-                    reject(error);
-                }
-            });
-        }).on('error', reject);
+        https
+            .get(url, (response) => {
+                let data = '';
+                response.on('data', (chunk) => (data += chunk));
+                response.on('end', () => {
+                    try {
+                        resolve(JSON.parse(data));
+                    } catch (error) {
+                        reject(error);
+                    }
+                });
+            })
+            .on('error', reject);
     });
 }
 
@@ -28,13 +30,15 @@ function makeRequest(url) {
 async function fetchRealWaitTimes(parkId) {
     try {
         const data = await makeRequest(QUEUE_TIMES_API.waitTimes(parkId));
-        
+
         // Transform Queue Times format to our format
         const rides = [];
+
+        // Handle US parks structure (rides nested in lands)
         if (data.lands) {
-            data.lands.forEach(land => {
+            data.lands.forEach((land) => {
                 if (land.rides) {
-                    land.rides.forEach(ride => {
+                    land.rides.forEach((ride) => {
                         rides.push({
                             id: ride.id.toString(),
                             name: ride.name,
@@ -46,7 +50,20 @@ async function fetchRealWaitTimes(parkId) {
                 }
             });
         }
-        
+
+        // Handle international parks structure (rides directly in top-level array)
+        if (data.rides) {
+            data.rides.forEach((ride) => {
+                rides.push({
+                    id: ride.id.toString(),
+                    name: ride.name,
+                    waitTime: ride.wait_time || 0,
+                    status: ride.is_open ? 'operating' : 'closed',
+                    lastUpdate: ride.last_updated
+                });
+            });
+        }
+
         return {
             parkId: parkId,
             parkName: `Park ${parkId}`,
@@ -115,7 +132,7 @@ const handler = async (event, context) => {
                 // Filter rides if specific rideIds requested
                 if (rideIds) {
                     const requestedRideIds = rideIds.split(',');
-                    realData.rides = realData.rides.filter(ride => requestedRideIds.includes(ride.id));
+                    realData.rides = realData.rides.filter((ride) => requestedRideIds.includes(ride.id));
                 }
 
                 return {
@@ -181,7 +198,7 @@ const handler = async (event, context) => {
         // Filter rides if specific rideIds requested
         if (rideIds) {
             const requestedRideIds = rideIds.split(',');
-            mockWaitTimes.rides = mockWaitTimes.rides.filter(ride => requestedRideIds.includes(ride.id));
+            mockWaitTimes.rides = mockWaitTimes.rides.filter((ride) => requestedRideIds.includes(ride.id));
         }
 
         return {
