@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
     return (
         <Layout
             title="Privacy - Confetti Software"
-            description="Privacy Policy for Confetti Software apps. Learn how we protect your data and respect your privacy in Math Flash, SudokuPlus, and TicTacToe+."
+            description="Privacy Policy for Confetti Software apps. Learn how we protect your data and respect your privacy in Math Flash, SudokuPlus, TicTacToe+, and LineWatch+."
         >
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
                         Privacy
                     </h1>
                     <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Your privacy matters to us</p>
-                    <p className="text-sm text-gray-500 mb-12">Last Updated: June 18, 2025</p>
+                    <p className="text-sm text-gray-500 mb-12">Last Updated: October 5, 2025</p>
                 </div>
             </div>
 
@@ -29,8 +29,8 @@ const PrivacyPolicy = () => {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6">
                     <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30 mb-8">
                         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                            At Confetti Software, we take your privacy seriously. Our apps, including Math Flash, SudokuPlus, and TicTacToe+, are designed to
-                            respect your data.
+                            At Confetti Software, we take your privacy seriously. Our apps, including Math Flash, SudokuPlus, TicTacToe+, and LineWatch+, are
+                            designed to respect your data and protect your privacy.
                         </p>
                     </div>
 
@@ -54,6 +54,68 @@ const PrivacyPolicy = () => {
                             <p className="text-sm text-gray-600">
                                 This data is used solely to serve and measure ads. Confetti Software does not collect, store, or share personal data from any of
                                 our apps.
+                            </p>
+                        </div>
+
+                        <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
+                            <h2
+                                className="text-xl font-medium text-black mb-4"
+                                style={{
+                                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
+                                }}
+                            >
+                                LineWatch+ Specific Privacy
+                            </h2>
+                            <p className="text-sm text-gray-600 mb-4">
+                                LineWatch+ requires additional permissions and data handling for its core functionality:
+                            </p>
+                            <ul className="list-disc list-inside mb-4 text-sm text-gray-600 space-y-2">
+                                <li>
+                                    <strong>Push Notifications:</strong> We collect your device token to send ride wait time alerts. This token is used solely
+                                    for delivering notifications and is not linked to your personal identity.
+                                </li>
+                                <li>
+                                    <strong>Ride Preferences:</strong> Your selected rides and wait time thresholds are stored locally on your device and
+                                    temporarily on our servers to monitor wait times.
+                                </li>
+                                <li>
+                                    <strong>Wait Time Data:</strong> We fetch real-time ride wait times from Queue-Times.com API. This data is not personal
+                                    information and is publicly available.
+                                </li>
+                                <li>
+                                    <strong>No Location Tracking:</strong> LineWatch+ does not access your location or track your movements.
+                                </li>
+                                <li>
+                                    <strong>No Personal Data:</strong> We do not collect your name, email, or any personally identifiable information.
+                                </li>
+                            </ul>
+                            <p className="text-sm text-gray-600">
+                                You can disable push notifications at any time through your device settings. When notifications are disabled, we stop monitoring
+                                your preferences and delete any temporary data.
+                            </p>
+                        </div>
+
+                        <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
+                            <h2
+                                className="text-xl font-medium text-black mb-4"
+                                style={{
+                                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
+                                }}
+                            >
+                                Data Storage and Retention
+                            </h2>
+                            <p className="text-sm text-gray-600 mb-4">
+                                <strong>LineWatch+ Data Handling:</strong>
+                            </p>
+                            <ul className="list-disc list-inside mb-4 text-sm text-gray-600 space-y-2">
+                                <li>Device tokens are stored securely and used only for push notifications</li>
+                                <li>Ride preferences are temporarily cached for monitoring purposes</li>
+                                <li>No user data is permanently stored on our servers</li>
+                                <li>All data is automatically purged when you disable notifications</li>
+                            </ul>
+                            <p className="text-sm text-gray-600">
+                                <strong>Third-Party Services:</strong> LineWatch+ uses Queue-Times.com for wait time data. Please review their privacy policy for
+                                information about their data practices.
                             </p>
                         </div>
 

@@ -73,7 +73,7 @@ const handler = async (event, context) => {
 
         // Create notification
         const notification = new apn.Notification();
-        notification.topic = process.env.APNS_BUNDLE_ID || 'com.confettisoftware.LineWatch';
+        notification.topic = process.env.APNS_BUNDLE_ID || 'com.confettisoftware.LineWatch+';
         notification.alert = {
             title: title,
             body: message
@@ -81,7 +81,7 @@ const handler = async (event, context) => {
         notification.badge = 1;
         notification.sound = 'default';
 
-        // Add custom payload for LineWatch
+        // Add custom payload for LineWatch+
         notification.payload = {
             rideName: rideName || 'Unknown Ride',
             waitTime: waitTime || 0,

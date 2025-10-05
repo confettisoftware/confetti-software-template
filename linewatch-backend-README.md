@@ -1,6 +1,6 @@
 # LineWatch Backend
 
-Serverless backend service for LineWatch ride wait time push notifications, built with Netlify Functions and Apple Push Notification service (APNs).
+Serverless backend service for LineWatch+ ride wait time push notifications, built with Netlify Functions and Apple Push Notification service (APNs).
 
 ## Features
 
@@ -18,7 +18,7 @@ Configure these environment variables in your Netlify dashboard:
 ```
 APNS_KEY_ID=your_10_character_key_id
 APNS_TEAM_ID=your_10_character_team_id
-APNS_BUNDLE_ID=com.confettisoftware.LineWatch
+APNS_BUNDLE_ID=com.confettisoftware.LineWatch+
 APNS_KEY_P8=your_p8_key_content
 NODE_ENV=production
 ```
@@ -103,7 +103,7 @@ func sendTestNotification() {
 
 ## Testing
 
-1. Run your LineWatch iOS app
+1. Run your LineWatch+ iOS app
 2. Copy the device token from the console
 3. Use the test endpoint to send a notification:
 

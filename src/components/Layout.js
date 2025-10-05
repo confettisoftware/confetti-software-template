@@ -102,7 +102,7 @@ const Layout = ({
                                     },
                                     {
                                         '@type': 'SoftwareApplication',
-                                        name: 'LineWatch',
+                                        name: 'LineWatch+',
                                         description: 'Disney ride wait time alerts',
                                         url: 'https://confettisoftware.com/linewatch',
                                         applicationCategory: 'LifestyleApplication',

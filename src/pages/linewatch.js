@@ -2,21 +2,24 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const LineWatch = () => {
+const LineWatch+ = () => {
     return (
         <Layout
-            title="LineWatch - Disney Ride Wait Time Alerts | Confetti Software"
-            description="LineWatch is a mobile app that sends push notifications when Disney ride wait times drop below your threshold. Never wait in long lines again with smart alerts."
+            title="LineWatch++ - Disney Ride Wait Time Alerts | Confetti Software"
+            description="LineWatch++ is a mobile app that sends push notifications when Disney ride wait times drop below your threshold. Never wait in long lines again with smart alerts."
         >
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
                 <div className="text-center max-w-4xl mx-auto">
                     <div className="w-28 h-28 mx-auto mb-12 rounded-2xl bg-white/90 border border-white/40 shadow-2xl overflow-hidden sm:backdrop-blur-md sm:bg-white/30">
-                        <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                            <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
+                        <Image
+                            src="/images/linewatch-icon.svg"
+                            alt="LineWatch+ App Icon"
+                            width={112}
+                            height={112}
+                            className="w-full h-full object-cover"
+                            priority
+                        />
                     </div>
                     <h1
                         className="text-3xl sm:text-4xl font-bold text-black mb-6"
@@ -25,7 +28,7 @@ const LineWatch = () => {
                             textTransform: 'none'
                         }}
                     >
-                        LineWatch
+                        LineWatch+
                     </h1>
                     <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Smart Disney ride wait time alerts</p>
                 </div>
@@ -44,15 +47,20 @@ const LineWatch = () => {
                             Features
                         </h2>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                             <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-6">
                                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5v-5zM4 19h6v-6H4v6zM4 13h6V7H4v6zM4 5h6V1H4v4z" />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M15 17h5l-5 5v-5zM4 19h6v-6H4v6zM4 13h6V7H4v6zM4 5h6V1H4v4z"
+                                    />
                                 </svg>
                             </div>
-                            <h3 
+                            <h3
                                 className="text-xl font-medium text-black mb-4"
                                 style={{
                                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -71,7 +79,7 @@ const LineWatch = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 
+                            <h3
                                 className="text-xl font-medium text-black mb-4"
                                 style={{
                                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -80,17 +88,31 @@ const LineWatch = () => {
                                 Real-Time Data
                             </h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                Live wait time data from Disney&apos;s official systems keeps you informed of current conditions. Data provided by <a href="https://queue-times.com/en-US" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Queue-Times.com</a>.
+                                Live wait time data from Disney&apos;s official systems keeps you informed of current conditions. Data provided by{' '}
+                                <a
+                                    href="https://queue-times.com/en-US"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                >
+                                    Queue-Times.com
+                                </a>
+                                .
                             </p>
                         </div>
 
                         <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                             <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mb-6">
                                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                    />
                                 </svg>
                             </div>
-                            <h3 
+                            <h3
                                 className="text-xl font-medium text-black mb-4"
                                 style={{
                                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -109,7 +131,7 @@ const LineWatch = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 
+                            <h3
                                 className="text-xl font-medium text-black mb-4"
                                 style={{
                                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -128,7 +150,7 @@ const LineWatch = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
-                            <h3 
+                            <h3
                                 className="text-xl font-medium text-black mb-4"
                                 style={{
                                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -144,10 +166,15 @@ const LineWatch = () => {
                         <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30">
                             <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center mb-6">
                                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                                    />
                                 </svg>
                             </div>
-                            <h3 
+                            <h3
                                 className="text-xl font-medium text-black mb-4"
                                 style={{
                                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -183,7 +210,7 @@ const LineWatch = () => {
                                 1
                             </div>
                             <div className="flex-1">
-                                <h3 
+                                <h3
                                     className="text-xl font-medium text-black mb-4"
                                     style={{
                                         fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -202,7 +229,7 @@ const LineWatch = () => {
                                 2
                             </div>
                             <div className="flex-1">
-                                <h3 
+                                <h3
                                     className="text-xl font-medium text-black mb-4"
                                     style={{
                                         fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -210,9 +237,7 @@ const LineWatch = () => {
                                 >
                                     Enable Notifications
                                 </h3>
-                                <p className="text-gray-600">
-                                    Grant permission for push notifications and let LineWatch monitor wait times in the background.
-                                </p>
+                                <p className="text-gray-600">Grant permission for push notifications and let LineWatch+ monitor wait times in the background.</p>
                             </div>
                         </div>
 
@@ -221,7 +246,7 @@ const LineWatch = () => {
                                 3
                             </div>
                             <div className="flex-1">
-                                <h3 
+                                <h3
                                     className="text-xl font-medium text-black mb-4"
                                     style={{
                                         fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -250,9 +275,9 @@ const LineWatch = () => {
                         Coming Soon
                     </h2>
                     <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-                        LineWatch is currently in development. Follow us for updates on when it will be available on the App Store.
+                        LineWatch+ is currently in development. Follow us for updates on when it will be available on the App Store.
                     </p>
-                    
+
                     <div className="space-y-6">
                         <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30 max-w-md mx-auto">
                             <div className="w-16 h-16 bg-gray-400 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -260,7 +285,7 @@ const LineWatch = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 
+                            <h3
                                 className="text-lg font-medium text-black mb-2"
                                 style={{
                                     fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
@@ -279,15 +304,15 @@ const LineWatch = () => {
                 <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
                     <p className="text-sm text-gray-600">
                         Wait time data provided by{' '}
-                        <a 
-                            href="https://queue-times.com/en-US" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                        <a
+                            href="https://queue-times.com/en-US"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-blue-600 hover:text-blue-800 underline font-medium"
                         >
                             Queue-Times.com
-                        </a>
-                        {' '}• Supporting theme parks worldwide with real-time wait time information
+                        </a>{' '}
+                        • Supporting theme parks worldwide with real-time wait time information
                     </p>
                 </div>
             </section>
@@ -309,4 +334,4 @@ const LineWatch = () => {
     );
 };
 
-export default LineWatch;
+export default LineWatch+;
