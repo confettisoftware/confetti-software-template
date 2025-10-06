@@ -73,7 +73,7 @@ const handler = async (event, context) => {
 
         // Create notification
         const notification = new apn.Notification();
-        notification.topic = process.env.APNS_BUNDLE_ID || 'com.confettisoftware.LineWatch+';
+        notification.topic = process.env.APNS_BUNDLE_ID || 'com.confettisoftware.LineWatchPlus';
         notification.alert = {
             title: title,
             body: message
