@@ -12,8 +12,15 @@ const createAPNProvider = () => {
 
     // Ensure the key is properly formatted
     let key = process.env.APNS_KEY_P8;
+    
+    // Handle different key formats
     if (!key.includes('BEGIN PRIVATE KEY')) {
+        // Key without headers
         key = `-----BEGIN PRIVATE KEY-----\n${key}\n-----END PRIVATE KEY-----`;
+    } else if (!key.includes('\n')) {
+        // Key with headers but no newlines (from environment variable)
+        key = key.replace('-----BEGIN PRIVATE KEY----- ', '-----BEGIN PRIVATE KEY-----\n');
+        key = key.replace(' -----END PRIVATE KEY-----', '\n-----END PRIVATE KEY-----');
     }
 
     const options = {
