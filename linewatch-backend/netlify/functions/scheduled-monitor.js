@@ -97,20 +97,8 @@ async function fetchRealWaitTimes(parkId) {
     }
 }
 
+// This function will be called by Netlify scheduled functions
 export const handler = async (event, context) => {
-    // Enable CORS
-    if (event.httpMethod === 'OPTIONS') {
-        return {
-            statusCode: 200,
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
-            },
-            body: ''
-        };
-    }
-
     try {
         console.log('Starting scheduled monitoring for all users...');
 
@@ -126,10 +114,6 @@ export const handler = async (event, context) => {
             console.log('No active alerts found');
             return {
                 statusCode: 200,
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Content-Type': 'application/json'
-                },
                 body: JSON.stringify({
                     success: true,
                     message: 'No active alerts to monitor',
@@ -292,10 +276,6 @@ export const handler = async (event, context) => {
 
         return {
             statusCode: 200,
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json'
-            },
             body: JSON.stringify({
                 success: true,
                 message: `Monitoring complete for ${alerts.length} alerts`,
@@ -306,13 +286,9 @@ export const handler = async (event, context) => {
             })
         };
     } catch (error) {
-        console.error('Error in monitor-wait-times:', error);
+        console.error('Error in scheduled monitoring:', error);
         return {
             statusCode: 500,
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json'
-            },
             body: JSON.stringify({
                 success: false,
                 error: 'Failed to monitor wait times',

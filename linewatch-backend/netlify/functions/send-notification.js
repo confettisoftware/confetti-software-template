@@ -12,7 +12,7 @@ const createAPNProvider = () => {
 
     // Ensure the key is properly formatted
     let key = process.env.APNS_KEY_P8;
-    
+
     // Handle different key formats
     if (!key.includes('BEGIN PRIVATE KEY')) {
         // Key without headers
@@ -95,45 +95,45 @@ const handler = async (event, context) => {
             timestamp: new Date().toISOString()
         };
 
-    // Send notification
-    let result;
-    try {
-        const provider = createAPNProvider();
-        console.log('Provider created successfully');
-        
-        result = await provider.send(notification, deviceToken);
-        console.log('Push notification result:', result);
-    } catch (apnError) {
-        console.error('APNs specific error:', apnError);
-        throw apnError;
-    }
+        // Send notification
+        let result;
+        try {
+            const provider = createAPNProvider();
+            console.log('Provider created successfully');
 
-    // Check if notification was sent successfully
-    if (result.sent && result.sent.length > 0) {
-        return {
-            statusCode: 200,
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-            },
-            body: JSON.stringify({
-                success: true,
-                message: 'Notification sent successfully',
-                sent: result.sent.length,
-                failed: result.failed ? result.failed.length : 0
-            })
-        };
-    } else {
-        return {
-            statusCode: 500,
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-            },
-            body: JSON.stringify({
-                error: 'Failed to send notification',
-                details: result.failed || 'Unknown error'
-            })
-        };
-    }
+            result = await provider.send(notification, deviceToken);
+            console.log('Push notification result:', result);
+        } catch (apnError) {
+            console.error('APNs specific error:', apnError);
+            throw apnError;
+        }
+
+        // Check if notification was sent successfully
+        if (result.sent && result.sent.length > 0) {
+            return {
+                statusCode: 200,
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                },
+                body: JSON.stringify({
+                    success: true,
+                    message: 'Notification sent successfully',
+                    sent: result.sent.length,
+                    failed: result.failed ? result.failed.length : 0
+                })
+            };
+        } else {
+            return {
+                statusCode: 500,
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                },
+                body: JSON.stringify({
+                    error: 'Failed to send notification',
+                    details: result.failed || 'Unknown error'
+                })
+            };
+        }
     } catch (error) {
         console.error('Error sending push notification:', error);
 

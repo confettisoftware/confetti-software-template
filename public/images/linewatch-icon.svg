@@ -1,19 +1,19 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024">
     <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
         </linearGradient>
     </defs>
-    <rect width="1024" height="1024" fill="url(#gradient)" rx="200"/>
+    <rect width="1024" height="1024" fill="url(#gradient)"/>
     <g transform="translate(512, 512)">
         <!-- Clock circle -->
-        <circle cx="0" cy="0" r="300" fill="none" stroke="white" stroke-width="20"/>
-        <!-- Hour hand pointing to 3 o'clock -->
-        <line x1="0" y1="0" x2="200" y2="0" stroke="white" stroke-width="30" stroke-linecap="round"/>
-        <!-- Minute hand pointing to 12 o'clock -->
-        <line x1="0" y1="0" x2="0" y2="-250" stroke="white" stroke-width="20" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="280" fill="none" stroke="white" stroke-width="48"/>
+        <!-- Hour hand pointing to 3 o'clock (shorter) -->
+        <line x1="0" y1="0" x2="110" y2="0" stroke="white" stroke-width="48" stroke-linecap="round"/>
+        <!-- Minute hand pointing to 12 o'clock (longer for L shape) -->
+        <line x1="0" y1="0" x2="0" y2="-170" stroke="white" stroke-width="48" stroke-linecap="round"/>
         <!-- Center dot -->
-        <circle cx="0" cy="0" r="25" fill="white"/>
+        <circle cx="0" cy="0" r="24" fill="white"/>
     </g>
 </svg>

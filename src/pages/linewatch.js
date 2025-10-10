@@ -237,7 +237,9 @@ const LineWatchPlus = () => {
                                 >
                                     Enable Notifications
                                 </h3>
-                                <p className="text-gray-600">Grant permission for push notifications and let LineWatch+ monitor wait times in the background.</p>
+                                <p className="text-gray-600">
+                                    Grant permission for push notifications and let LineWatch+ monitor wait times in the background.
+                                </p>
                             </div>
                         </div>
 
