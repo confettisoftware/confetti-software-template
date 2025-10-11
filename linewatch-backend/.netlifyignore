@@ -1,0 +1,9 @@
+# Ignore Next.js detection files
+next.config.js
+next-env.d.ts
+src/
+public/
+pages/
+components/
+*.tsx
+*.ts

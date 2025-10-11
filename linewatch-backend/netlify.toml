@@ -1,11 +1,12 @@
 [build]
   publish = "."
-  command = "echo 'No build required'"
+  command = "./build.sh"
   functions = "netlify/functions"
 
 [functions]
   node_bundler = "esbuild"
 
+# Disable all auto-detected plugins
 [[plugins]]
   package = "@netlify/plugin-nextjs"
   [plugins.inputs]
