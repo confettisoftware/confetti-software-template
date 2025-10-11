@@ -1,4 +1,4 @@
-# Ignore Next.js detection files
+# Ignore everything that might trigger framework detection
 next.config.js
 next-env.d.ts
 src/
@@ -7,3 +7,5 @@ pages/
 components/
 *.tsx
 *.ts
+node_modules/
+.git/

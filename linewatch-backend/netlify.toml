@@ -1,16 +1,14 @@
 [build]
   publish = "."
-  command = "./build.sh"
+  command = "./build-clean.sh"
   functions = "netlify/functions"
 
 [functions]
   node_bundler = "esbuild"
 
-# Disable all auto-detected plugins
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    disable = true
+# Explicitly disable all auto-detection
+[build.environment]
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/api/*"
