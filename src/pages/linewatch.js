@@ -13,7 +13,7 @@ const LineWatchPlus = () => {
                 <div className="text-center max-w-4xl mx-auto">
                     <div className="w-28 h-28 mx-auto mb-12 rounded-2xl bg-white/90 border border-white/40 shadow-2xl overflow-hidden sm:backdrop-blur-md sm:bg-white/30">
                         <Image
-                            src="/images/linewatch-icon.svg"
+                            src="/images/linewatch-icon-optimized.png"
                             alt="LineWatch+ App Icon"
                             width={112}
                             height={112}

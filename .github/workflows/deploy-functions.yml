@@ -1,0 +1,51 @@
+name: Deploy LineWatch+ Functions
+
+on:
+    push:
+        branches: [main]
+        paths: ['linewatch-backend/**']
+    schedule:
+        - cron: '*/5 * * * *' # Every 5 minutes for monitoring
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18'
+
+            - name: Install dependencies
+              run: |
+                  cd linewatch-backend
+                  npm install
+
+            - name: Deploy to Netlify
+              uses: nwtgck/actions-netlify@v2.0
+              with:
+                  publish-dir: './linewatch-backend'
+                  production-branch: main
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: 'Deploy LineWatch+ Functions'
+                  enable-pull-request-comment: false
+                  enable-commit-comment: true
+                  overwrites-pull-request-comment: true
+              env:
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+            - name: Run Monitoring (if scheduled)
+              if: github.event_name == 'schedule'
+              run: |
+                  cd linewatch-backend
+                  SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SUPABASE_SERVICE_ROLE_KEY }} \
+                  APNS_KEY_P8="${{ secrets.APNS_KEY_P8 }}" \
+                  APNS_KEY_ID="${{ secrets.APNS_KEY_ID }}" \
+                  APNS_TEAM_ID="${{ secrets.APNS_TEAM_ID }}" \
+                  APNS_BUNDLE_ID="${{ secrets.APNS_BUNDLE_ID }}" \
+                  NODE_ENV="production" \
+                  node manual-monitor.js

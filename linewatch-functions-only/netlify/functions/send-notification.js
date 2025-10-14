@@ -85,6 +85,7 @@ const handler = async (event, context) => {
             title: title,
             body: message
         };
+        notification.badge = 1;
         notification.sound = 'default';
 
         // Add custom payload for LineWatch+

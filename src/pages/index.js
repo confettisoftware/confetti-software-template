@@ -175,16 +175,14 @@ const Home = () => {
                                 <Link href="/linewatch" className="block">
                                     <div className="aspect-square bg-gradient-to-br from-blue-50/50 to-purple-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
                                         <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
-                                            <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                                                <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                                    />
-                                                </svg>
-                                            </div>
+                                            <Image
+                                                src="/images/linewatch-icon-optimized.png"
+                                                alt="LineWatch+ App Icon"
+                                                width={128}
+                                                height={128}
+                                                className="w-full h-full object-cover"
+                                                priority
+                                            />
                                         </div>
                                     </div>
                                 </Link>

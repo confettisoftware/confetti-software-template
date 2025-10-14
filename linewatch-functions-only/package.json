@@ -1,0 +1,19 @@
+{
+  "name": "linewatch-backend",
+  "version": "1.0.0",
+  "description": "LineWatch+ backend API for push notifications",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "monitor": "node manual-monitor.js"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.6.0",
+    "@supabase/supabase-js": "^2.38.0",
+    "apn": "^2.2.0"
+  },
+  "keywords": ["linewatch+", "disney", "notifications", "apns"],
+  "author": "Confetti Software",
+  "license": "MIT"
+}

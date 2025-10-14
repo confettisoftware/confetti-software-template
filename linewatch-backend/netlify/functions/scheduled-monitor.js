@@ -189,7 +189,6 @@ export const handler = async (event, context) => {
                                 title: '🎢 Ride Alert!',
                                 body: `${ride.name} has a ${ride.waitTime}-minute wait!`
                             };
-                            notification.badge = 1;
                             notification.sound = 'default';
                             notification.payload = {
                                 rideName: ride.name,

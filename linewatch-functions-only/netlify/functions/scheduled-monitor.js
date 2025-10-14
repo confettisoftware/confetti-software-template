@@ -1,6 +1,3 @@
-// Manual monitoring script for LineWatch+ automatic notifications
-// This can be run locally or set up as a cron job
-
 import { createClient } from '@supabase/supabase-js';
 import apn from 'apn';
 
@@ -100,9 +97,10 @@ async function fetchRealWaitTimes(parkId) {
     }
 }
 
-async function monitorAllUsers() {
+// This function will be called by Netlify scheduled functions
+export const handler = async (event, context) => {
     try {
-        console.log('Starting manual monitoring for all users...');
+        console.log('Starting scheduled monitoring for all users...');
 
         // Get all active alerts from Supabase
         const { data: alerts, error: alertsError } = await supabase.from('user_alerts').select('*').eq('is_active', true);
@@ -115,10 +113,13 @@ async function monitorAllUsers() {
         if (!alerts || alerts.length === 0) {
             console.log('No active alerts found');
             return {
-                success: true,
-                message: 'No active alerts to monitor',
-                alertsChecked: 0,
-                notificationsSent: 0
+                statusCode: 200,
+                body: JSON.stringify({
+                    success: true,
+                    message: 'No active alerts to monitor',
+                    alertsChecked: 0,
+                    notificationsSent: 0
+                })
             };
         }
 
@@ -188,6 +189,7 @@ async function monitorAllUsers() {
                                 title: '🎢 Ride Alert!',
                                 body: `${ride.name} has a ${ride.waitTime}-minute wait!`
                             };
+                            notification.badge = 1;
                             notification.sound = 'default';
                             notification.payload = {
                                 rideName: ride.name,
@@ -198,9 +200,7 @@ async function monitorAllUsers() {
                             };
 
                             const provider = createAPNProvider();
-                            console.log(`📱 Sending to device token: ${alert.device_token}`);
                             const result = await provider.send(notification, alert.device_token);
-                            console.log(`📊 Send result:`, JSON.stringify(result));
 
                             if (result.sent && result.sent.length > 0) {
                                 console.log(`✅ Notification sent successfully for ${ride.name}`);
@@ -275,34 +275,25 @@ async function monitorAllUsers() {
         console.log(`Monitoring complete: ${totalNotificationsSent} notifications sent`);
 
         return {
-            success: true,
-            message: `Monitoring complete for ${alerts.length} alerts`,
-            alertsChecked: alerts.length,
-            notificationsSent: totalNotificationsSent,
-            parksMonitored: parkIds.length,
-            results: results
+            statusCode: 200,
+            body: JSON.stringify({
+                success: true,
+                message: `Monitoring complete for ${alerts.length} alerts`,
+                alertsChecked: alerts.length,
+                notificationsSent: totalNotificationsSent,
+                parksMonitored: parkIds.length,
+                results: results
+            })
         };
     } catch (error) {
-        console.error('Error in manual monitoring:', error);
+        console.error('Error in scheduled monitoring:', error);
         return {
-            success: false,
-            error: 'Failed to monitor wait times',
-            message: error.message
+            statusCode: 500,
+            body: JSON.stringify({
+                success: false,
+                error: 'Failed to monitor wait times',
+                message: error.message
+            })
         };
     }
-}
-
-// Run the monitoring
-if (import.meta.url === `file://${process.argv[1]}`) {
-    monitorAllUsers()
-        .then((result) => {
-            console.log('Final result:', JSON.stringify(result, null, 2));
-            process.exit(result.success ? 0 : 1);
-        })
-        .catch((error) => {
-            console.error('Script error:', error);
-            process.exit(1);
-        });
-}
-
-export { monitorAllUsers };
+};

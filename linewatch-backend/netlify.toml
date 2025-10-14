@@ -1,14 +1,19 @@
 [build]
   publish = "."
-  command = "./build-clean.sh"
+  command = "echo 'Functions-only build'"
   functions = "netlify/functions"
 
 [functions]
   node_bundler = "esbuild"
 
-# Explicitly disable all auto-detection
+# Explicitly disable all plugins
+[build.processing]
+  skip_processing = true
+
+# Disable all auto-detection
 [build.environment]
   NODE_VERSION = "18"
+  NPM_FLAGS = "--production"
 
 [[redirects]]
   from = "/api/*"
