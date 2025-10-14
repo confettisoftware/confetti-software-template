@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
                         Privacy
                     </h1>
                     <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Your privacy matters to us</p>
-                    <p className="text-sm text-gray-500 mb-12">Last Updated: October 5, 2025</p>
+                    <p className="text-sm text-gray-500 mb-12">Last Updated: October 14, 2025</p>
                 </div>
             </div>
 
@@ -71,19 +71,19 @@ const PrivacyPolicy = () => {
                             </p>
                             <ul className="list-disc list-inside mb-4 text-sm text-gray-600 space-y-2">
                                 <li>
+                                    <strong>Location Services:</strong> LineWatch+ may access your location to provide directions to theme park attractions and to enhance your in-park experience. Location data is used only when you request directions and is not stored on our servers or shared with third parties. You can control location permissions through your device settings at any time.
+                                </li>
+                                <li>
                                     <strong>Push Notifications:</strong> We collect your device token to send ride wait time alerts. This token is used solely
                                     for delivering notifications and is not linked to your personal identity.
                                 </li>
                                 <li>
                                     <strong>Ride Preferences:</strong> Your selected rides and wait time thresholds are stored locally on your device and
-                                    temporarily on our servers to monitor wait times.
+                                    temporarily on our servers to monitor wait times and send timely alerts.
                                 </li>
                                 <li>
                                     <strong>Wait Time Data:</strong> We fetch real-time ride wait times from Queue-Times.com API. This data is not personal
                                     information and is publicly available.
-                                </li>
-                                <li>
-                                    <strong>No Location Tracking:</strong> LineWatch+ does not access your location or track your movements.
                                 </li>
                                 <li>
                                     <strong>No Personal Data:</strong> We do not collect your name, email, or any personally identifiable information.
@@ -108,14 +108,17 @@ const PrivacyPolicy = () => {
                                 <strong>LineWatch+ Data Handling:</strong>
                             </p>
                             <ul className="list-disc list-inside mb-4 text-sm text-gray-600 space-y-2">
+                                <li>Location data is used only for providing directions and is never stored or transmitted to our servers</li>
                                 <li>Device tokens are stored securely and used only for push notifications</li>
-                                <li>Ride preferences are temporarily cached for monitoring purposes</li>
+                                <li>Ride preferences are temporarily cached for monitoring purposes and sending alerts</li>
                                 <li>No user data is permanently stored on our servers</li>
                                 <li>All data is automatically purged when you disable notifications</li>
                             </ul>
+                            <p className="text-sm text-gray-600 mb-4">
+                                <strong>Third-Party Services:</strong> LineWatch+ uses Queue-Times.com for wait time data and Apple Maps for providing directions. Location services use Apple's native iOS location APIs. Please review their respective privacy policies for information about their data practices.
+                            </p>
                             <p className="text-sm text-gray-600">
-                                <strong>Third-Party Services:</strong> LineWatch+ uses Queue-Times.com for wait time data. Please review their privacy policy for
-                                information about their data practices.
+                                <strong>Location Permission Control:</strong> You have full control over location access. LineWatch+ will request permission before accessing your location, and you can revoke this permission at any time through iOS Settings → Privacy & Security → Location Services.
                             </p>
                         </div>
 
