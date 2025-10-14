@@ -71,7 +71,7 @@ const PrivacyPolicy = () => {
                             </p>
                             <ul className="list-disc list-inside mb-4 text-sm text-gray-600 space-y-2">
                                 <li>
-                                    <strong>Location Services:</strong> LineWatch+ may access your location to provide directions to theme park attractions and to enhance your in-park experience. Location data is used only when you request directions and is not stored on our servers or shared with third parties. You can control location permissions through your device settings at any time.
+                                    <strong>Location Services:</strong> LineWatch+ collects your location data to provide directions to theme park attractions and to enhance your in-park experience. Location data is used for navigation purposes and is not stored on our servers or shared with third parties. You can control location permissions through your device settings at any time.
                                 </li>
                                 <li>
                                     <strong>Push Notifications:</strong> We collect your device token to send ride wait time alerts. This token is used solely
