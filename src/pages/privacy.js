@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
                                 <li>All data is automatically purged when you disable notifications</li>
                             </ul>
                             <p className="text-sm text-gray-600 mb-4">
-                                <strong>Third-Party Services:</strong> LineWatch+ uses Queue-Times.com for wait time data and Apple Maps for providing directions. Location services use Apple's native iOS location APIs. Please review their respective privacy policies for information about their data practices.
+                                <strong>Third-Party Services:</strong> LineWatch+ uses Queue-Times.com for wait time data and Apple Maps for providing directions. Location services use Apple&apos;s native iOS location APIs. Please review their respective privacy policies for information about their data practices.
                             </p>
                             <p className="text-sm text-gray-600">
                                 <strong>Location Permission Control:</strong> You have full control over location access. LineWatch+ will request permission before accessing your location, and you can revoke this permission at any time through iOS Settings → Privacy & Security → Location Services.
