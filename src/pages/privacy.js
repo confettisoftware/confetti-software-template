@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
                         Privacy
                     </h1>
                     <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Your privacy matters to us</p>
-                    <p className="text-sm text-gray-500 mb-12">Last Updated: October 14, 2025</p>
+                    <p className="text-sm text-gray-500 mb-12">Last Updated: October 14, 2025 - Updated</p>
                 </div>
             </div>
 
