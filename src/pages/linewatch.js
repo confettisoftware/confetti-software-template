@@ -5,8 +5,8 @@ import Image from 'next/image';
 const LineWatchPlus = () => {
     return (
         <Layout
-            title="LineWatch+ - Disney Ride Wait Time Alerts | Confetti Software"
-            description="LineWatch+ is a mobile app that sends push notifications when Disney ride wait times drop below your threshold. Never wait in long lines again with smart alerts."
+            title="LineWatch+ - Theme Park Wait Time Alerts | Confetti Software"
+            description="LineWatch+ is a mobile app that sends push notifications when theme park ride wait times drop below your threshold. Never wait in long lines again with smart alerts."
         >
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
@@ -30,7 +30,7 @@ const LineWatchPlus = () => {
                     >
                         LineWatch+
                     </h1>
-                    <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Smart Disney ride wait time alerts</p>
+                    <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Smart theme park wait time alerts</p>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@ const LineWatchPlus = () => {
                                 Smart Alerts
                             </h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                Get push notifications when your favorite Disney rides have wait times below your threshold.
+                                Get push notifications when your favorite theme park rides have wait times below your threshold.
                             </p>
                         </div>
 
@@ -88,7 +88,7 @@ const LineWatchPlus = () => {
                                 Real-Time Data
                             </h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                Live wait time data from Disney&apos;s official systems keeps you informed of current conditions. Data provided by{' '}
+                                Live wait time data from theme parks keeps you informed of current conditions. Data provided by{' '}
                                 <a
                                     href="https://queue-times.com/en-US"
                                     target="_blank"
@@ -183,7 +183,7 @@ const LineWatchPlus = () => {
                                 Multiple Parks
                             </h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                Support for Disney World, Disneyland, and other Disney parks with comprehensive ride coverage.
+                                Support for major theme parks worldwide with comprehensive ride coverage and real-time wait time data.
                             </p>
                         </div>
                     </div>
@@ -219,7 +219,7 @@ const LineWatchPlus = () => {
                                     Choose Your Rides
                                 </h3>
                                 <p className="text-gray-600">
-                                    Select the Disney rides you want to track and set your preferred wait time threshold for each one.
+                                    Select the theme park rides you want to track and set your preferred wait time threshold for each one.
                                 </p>
                             </div>
                         </div>
@@ -304,7 +304,7 @@ const LineWatchPlus = () => {
             {/* Attribution Section */}
             <section className="py-12 bg-gray-100">
                 <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 mb-4">
                         Wait time data provided by{' '}
                         <a
                             href="https://queue-times.com/en-US"
@@ -315,6 +315,9 @@ const LineWatchPlus = () => {
                             Queue-Times.com
                         </a>{' '}
                         • Supporting theme parks worldwide with real-time wait time information
+                    </p>
+                    <p className="text-xs text-gray-500">
+                        <em>LineWatch+ is an independent app and is not affiliated with any theme park or entertainment company.</em>
                     </p>
                 </div>
             </section>

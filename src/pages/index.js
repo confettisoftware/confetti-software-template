@@ -190,7 +190,7 @@ const Home = () => {
                                     <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
                                         LineWatch+
                                     </h3>
-                                    <p className="text-sm text-gray-700 mb-4">Disney ride wait alerts</p>
+                                    <p className="text-sm text-gray-700 mb-4">Theme park wait alerts</p>
                                     <div className="text-xs text-gray-500 bg-gray-100 rounded-lg px-3 py-2 inline-block">Coming Soon</div>
                                 </div>
                             </div>
