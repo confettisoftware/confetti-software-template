@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
+import { trackAppStoreClick } from '../utils/analytics';
 
 const LineWatchPlus = () => {
     return (
@@ -266,38 +267,32 @@ const LineWatchPlus = () => {
             </section>
 
             {/* Download Section */}
-            <section className="py-20 bg-gray-50">
-                <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
+            <section className="py-20 bg-white">
+                <div className="max-w-2xl mx-auto text-center px-4 sm:px-6">
                     <h2
-                        className="text-3xl font-light text-black mb-8 tracking-wider"
+                        className="text-2xl font-light text-black mb-6"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
                         }}
                     >
                         Coming Soon
                     </h2>
-                    <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-                        LineWatch+ is currently in development. Follow us for updates on when it will be available on the App Store.
-                    </p>
-
-                    <div className="space-y-6">
-                        <div className="backdrop-blur-sm bg-white/20 rounded-2xl p-8 border border-white/30 max-w-md mx-auto">
-                            <div className="w-16 h-16 bg-gray-400 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <h3
-                                className="text-lg font-medium text-black mb-2"
-                                style={{
-                                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
-                                }}
-                            >
-                                App Store
-                            </h3>
-                            <p className="text-sm text-gray-600">Coming soon to iOS</p>
-                        </div>
-                    </div>
+                    <p className="text-gray-600 mb-8">LineWatch+ is now on the App Store</p>
+                    <a
+                        href="https://apps.apple.com/us/app/linewatch/id6753585726"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                        onClick={() => trackAppStoreClick('LineWatch+')}
+                    >
+                        <Image
+                            src="/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                            alt="Download on the App Store"
+                            width={120}
+                            height={40}
+                            className="h-10 w-auto hover:opacity-80 transition-opacity mx-auto"
+                        />
+                    </a>
                 </div>
             </section>
 
