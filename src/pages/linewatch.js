@@ -275,9 +275,9 @@ const LineWatchPlus = () => {
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
                         }}
                     >
-                        Coming Soon
+                        Available Now
                     </h2>
-                    <p className="text-gray-600 mb-8">LineWatch+ is now on the App Store</p>
+                    <p className="text-gray-600 mb-8">Download LineWatch+ from the App Store</p>
                     <a
                         href="https://apps.apple.com/us/app/linewatch/id6753585726"
                         target="_blank"
