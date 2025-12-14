@@ -27,6 +27,12 @@ const Navbar = () => {
             url: '/tictactoe',
             keywords: 'tictactoe, tic tac toe, strategy, game, games, AI, artificial intelligence, X, O, board, classic, fun'
         },
+        {
+            title: 'LineWatch+',
+            description: 'Theme park wait time alerts',
+            url: '/linewatch',
+            keywords: 'linewatch, theme park, wait times, alerts, notifications, rides, queue, lines, vacation, travel, disneyland, dca, amusement park'
+        },
         { title: 'Games', description: 'All our mobile games', url: '/', keywords: 'games, gaming, mobile games, apps, entertainment, fun, play, interactive' },
         {
             title: 'Learning',
@@ -83,6 +89,9 @@ const Navbar = () => {
                                 </Link>
                                 <Link href="/tictactoe" className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2">
                                     TicTacToe+
+                                </Link>
+                                <Link href="/linewatch" className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2">
+                                    LineWatch+
                                 </Link>
                             </div>
                         </div>
@@ -186,6 +195,13 @@ const Navbar = () => {
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 TicTacToe+
+                            </Link>
+                            <Link
+                                href="/linewatch"
+                                className="block text-gray-600 hover:text-black transition-colors text-sm font-medium uppercase ml-2"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                LineWatch+
                             </Link>
                         </div>
 
