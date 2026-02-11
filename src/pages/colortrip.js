@@ -22,7 +22,7 @@ const ColorTrip = () => {
                         />
                     </div>
                     <h1
-                        className="text-3xl sm:text-4xl font-bold text-black mb-12"
+                        className="text-3xl sm:text-4xl font-bold text-black mb-6"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
                             textTransform: 'none'
@@ -30,6 +30,7 @@ const ColorTrip = () => {
                     >
                         ColorTrip
                     </h1>
+                    <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Tie-dye color mixer</p>
                 </div>
             </div>
 
