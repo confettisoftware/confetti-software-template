@@ -35,7 +35,7 @@ const Navbar = () => {
         },
         {
             title: 'ColorTrip',
-            description: 'Pick a color, get a recipe—for tie-dye and fiber.',
+            description: 'Pick a color, get a recipe for tie-dye and fiber.',
             url: '/colortrip',
             keywords: 'colortrip, dye, tie-dye, fiber, recipe, color picker, RGB, RYB, Procion, fabric dye, color wheel'
         },

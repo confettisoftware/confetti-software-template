@@ -116,7 +116,7 @@ const Layout = ({
                                     {
                                         '@type': 'SoftwareApplication',
                                         name: 'ColorTrip',
-                                        description: 'Pick a color, get a recipe—for tie-dye and fiber.',
+                                        description: 'Pick a color, get a recipe for tie-dye and fiber.',
                                         url: 'https://confettisoftware.com/colortrip',
                                         applicationCategory: 'LifestyleApplication',
                                         operatingSystem: 'iOS',

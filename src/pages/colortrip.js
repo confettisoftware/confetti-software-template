@@ -6,7 +6,7 @@ const ColorTrip = () => {
     return (
         <Layout
             title="ColorTrip - Dye Recipes from Any Color | Confetti Software"
-            description="ColorTrip: dye recipes from any color—for tie-dye and fiber. Pick a color, get a recipe. Color picker from wheel or photo, instant recipes in parts and teaspoons, dye library, harmony tools."
+            description="ColorTrip: dye recipes from any color for tie-dye and fiber. Pick a color, get a recipe. Color picker from wheel or photo, instant recipes in parts and teaspoons, dye library, harmony tools."
         >
             {/* Hero Section */}
             <div className="min-h-screen bg-white text-black relative overflow-hidden flex items-center justify-center px-4">
@@ -22,7 +22,7 @@ const ColorTrip = () => {
                         />
                     </div>
                     <h1
-                        className="text-3xl sm:text-4xl font-bold text-black mb-6"
+                        className="text-3xl sm:text-4xl font-bold text-black mb-12"
                         style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif',
                             textTransform: 'none'
@@ -30,7 +30,6 @@ const ColorTrip = () => {
                     >
                         ColorTrip
                     </h1>
-                    <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">Pick a color, get a recipe—for tie-dye and fiber.</p>
                 </div>
             </div>
 
@@ -83,7 +82,7 @@ const ColorTrip = () => {
                                 Instant Recipes
                             </h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                Get recipes in parts and teaspoons, scaled to your bottle size and dye intensity. No guesswork—just mix and go.
+                                Get recipes in parts and teaspoons, scaled to your bottle size and dye intensity. No guesswork, just mix and go.
                             </p>
                         </div>
 
