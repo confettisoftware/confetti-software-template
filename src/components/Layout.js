@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Layout = ({
     children,
     title = 'Confetti Software | Fun Apps for iPhone & iPad',
-    description = 'Fun apps for iPhone & iPad. Math Flash, SudokuPlus, and TicTacToe+ on the App Store.'
+    description = 'Fun apps for iPhone & iPad. Math Flash, SudokuPlus, TicTacToe+, LineWatch+, and ColorTrip on the App Store.'
 }) => {
     return (
         <>
@@ -105,6 +105,19 @@ const Layout = ({
                                         name: 'LineWatch+',
                                         description: 'Theme park wait time alerts',
                                         url: 'https://confettisoftware.com/linewatch',
+                                        applicationCategory: 'LifestyleApplication',
+                                        operatingSystem: 'iOS',
+                                        offers: {
+                                            '@type': 'Offer',
+                                            price: '0',
+                                            priceCurrency: 'USD'
+                                        }
+                                    },
+                                    {
+                                        '@type': 'SoftwareApplication',
+                                        name: 'ColorTrip',
+                                        description: 'Pick a color, get a recipe—for tie-dye and fiber.',
+                                        url: 'https://confettisoftware.com/colortrip',
                                         applicationCategory: 'LifestyleApplication',
                                         operatingSystem: 'iOS',
                                         offers: {

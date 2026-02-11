@@ -209,6 +209,32 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* ColorTrip */}
+                        <div className="group">
+                            <div className="backdrop-blur-xl bg-white/20 border border-white/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                                <Link href="/colortrip" className="block">
+                                    <div className="aspect-square bg-gradient-to-br from-amber-50/50 to-violet-100/50 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-2xl overflow-hidden">
+                                            <Image
+                                                src="/images/colortrip-icon.png"
+                                                alt="ColorTrip App Icon"
+                                                width={128}
+                                                height={128}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                                </Link>
+                                <div className="p-4 sm:p-6 backdrop-blur-sm bg-white/10 text-center">
+                                    <h3 className="text-lg font-medium text-black mb-3" style={{ textTransform: 'none' }}>
+                                        ColorTrip
+                                    </h3>
+                                    <p className="text-sm text-gray-700 mb-4">Pick a color, get a recipe—for tie-dye and fiber.</p>
+                                    <div className="text-xs text-gray-500 bg-gray-100 rounded-lg px-3 py-2 inline-block">Coming Soon</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

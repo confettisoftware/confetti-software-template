@@ -33,6 +33,12 @@ const Navbar = () => {
             url: '/linewatch',
             keywords: 'linewatch, theme park, wait times, alerts, notifications, rides, queue, lines, vacation, travel, disneyland, dca, amusement park'
         },
+        {
+            title: 'ColorTrip',
+            description: 'Pick a color, get a recipe—for tie-dye and fiber.',
+            url: '/colortrip',
+            keywords: 'colortrip, dye, tie-dye, fiber, recipe, color picker, RGB, RYB, Procion, fabric dye, color wheel'
+        },
         { title: 'Games', description: 'All our mobile games', url: '/', keywords: 'games, gaming, mobile games, apps, entertainment, fun, play, interactive' },
         {
             title: 'Learning',
@@ -92,6 +98,9 @@ const Navbar = () => {
                                 </Link>
                                 <Link href="/linewatch" className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2">
                                     LineWatch+
+                                </Link>
+                                <Link href="/colortrip" className="block px-4 py-3 text-sm text-gray-700 hover:bg-white/50 transition-colors rounded-lg mx-2">
+                                    ColorTrip
                                 </Link>
                             </div>
                         </div>
@@ -202,6 +211,13 @@ const Navbar = () => {
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 LineWatch+
+                            </Link>
+                            <Link
+                                href="/colortrip"
+                                className="block text-gray-600 hover:text-black transition-colors text-sm font-medium uppercase ml-2"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                ColorTrip
                             </Link>
                         </div>
 
