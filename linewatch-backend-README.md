@@ -39,11 +39,13 @@ NODE_ENV=production
 ## API Endpoints
 
 ### Send Notification
+
 **POST** `/api/send-notification`
 
 Send a push notification to a device.
 
 **Request Body:**
+
 ```json
 {
   "deviceToken": "a1b2c3d4e5f6...",
@@ -55,6 +57,7 @@ Send a push notification to a device.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -65,11 +68,13 @@ Send a push notification to a device.
 ```
 
 ### Test Notification
+
 **POST** `/api/test-notification`
 
 Send a test notification to verify your setup.
 
 **Request Body:**
+
 ```json
 {
   "deviceToken": "a1b2c3d4e5f6..."
@@ -82,17 +87,17 @@ Send a test notification to verify your setup.
 // Example usage in your iOS app
 func sendTestNotification() {
     guard let url = URL(string: "https://your-netlify-site.netlify.app/api/test-notification") else { return }
-    
+
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    
+
     let body = [
         "deviceToken": pushService.deviceToken ?? ""
     ]
-    
+
     request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-    
+
     URLSession.shared.dataTask(with: request) { data, response, error in
         if let data = data {
             print("Test notification response:", String(data: data, encoding: .utf8) ?? "")

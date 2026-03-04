@@ -6,42 +6,33 @@ LineWatch+
 
 ## Subtitle
 
-Smart Theme Park Wait Time Alerts
+Disneyland & DCA Wait Time Alerts
 
 ## App Description
 
-LineWatch+ is the most powerful ride wait time app for major theme parks. With LineWatch+, you'll never miss a short line ever again!
+LineWatch+ is the smartest way to track ride wait times at Disneyland and California Adventure. Never miss a short line again!
 
-With LineWatch+, you can:
-
-• View real-time wait times for rides at popular theme parks worldwide
-• Set smart notifications to alert you when wait times drop below your threshold
-• Create a customizable list of your favorite rides to track
-• View ride wait times at a glance with an intuitive interface
-
-Other Features:
-
+**Powerful Features:**
+• View real-time wait times for all Disneyland and DCA attractions
+• Set custom notifications when wait times drop below your threshold
+• Track multiple rides simultaneously
+• Lightning Lane availability status
+• Create a customizable list of your favorite rides
 • Incredibly fast and battery efficient
-• Always accurate with real-time data from multiple theme parks
-• Smart background processing ensures minimal battery drain
-• Push notifications delivered instantly when conditions change
 
-How It Works:
+**How it works:**
 
-1. Select the theme park rides you want to track
-2. Set your preferred wait time threshold for each ride
-3. Enable push notifications
-4. Get instant alerts when wait times drop below your threshold
+1. Select your must-ride attractions from both parks
+2. Set your ideal wait time threshold
+3. Get instant alerts when lines get shorter
 
-Perfect for theme park enthusiasts who want to make the most of their visit by avoiding long waits and maximizing ride time.
+Perfect for Disneyland and California Adventure visitors who want to maximize their park time and avoid long waits.
 
-Data Source: Wait time information provided by Queue-Times.com
-
-Important: LineWatch+ is an independent app and is not affiliated with any theme park or entertainment company.
+_LineWatch+ is an independent app providing wait time data as a service to Disneyland and DCA visitors. Data provided by Queue-Times.com. This app is not affiliated with or endorsed by The Walt Disney Company._
 
 ## Keywords
 
-theme park, wait times, alerts, notifications, rides, queue, lines, vacation, travel, amusement park, attractions, real-time, smart notifications, park planning, ride tracking
+disneyland, disney california adventure, dca, wait times, alerts, notifications, rides, queue, lines, vacation, travel, attractions, real-time, park planning, ride tracking, lightning lane, annual pass, anaheim, theme park, adventureland, tomorrowland, fantasyland, frontierland, cars land, pixar pier, avengers campus
 
 ## Category
 
