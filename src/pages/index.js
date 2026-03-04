@@ -231,7 +231,21 @@ const Home = () => {
                                         ColorTrip
                                     </h3>
                                     <p className="text-sm text-gray-700 mb-4">Tie-dye color mixer</p>
-                                    <div className="text-xs text-gray-500 bg-gray-100 rounded-lg px-3 py-2 inline-block">Coming Soon</div>
+                                    <a
+                                        href="https://apps.apple.com/us/app/colortrip-tie-dye-mixer/id6759067812"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block"
+                                        onClick={() => trackAppStoreClick('ColorTrip')}
+                                    >
+                                        <Image
+                                            src="/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                                            alt="Download on the App Store"
+                                            width={120}
+                                            height={40}
+                                            className="h-8 w-auto hover:opacity-80 transition-opacity"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                         </div>
