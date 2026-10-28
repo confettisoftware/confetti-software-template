@@ -316,7 +316,7 @@ const Home = () => {
 
                     {/* Bottom Bar */}
                     <div className="pt-4 border-t border-white/30">
-                        <p className="text-xs text-gray-500 tracking-wider">© 2025 Confetti Software. All rights reserved.</p>
+                        <p className="text-xs text-gray-500 tracking-wider">© {new Date().getFullYear()} Confetti Software. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
